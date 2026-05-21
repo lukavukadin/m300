@@ -15,3 +15,16 @@ Ich deploye Vaultwarden — ein self-hosted Bitwarden-Klon. Ein echtes Tool das 
 ### Gaming Stats Dashboard
 
 Ich baue einen Service der meine Gaming-Stats (z.B. Steam) trackt und mit Grafana visualisiert. Macht Spass, ist nützlich und zeigt trotzdem alle technischen Konzepte von Kubernetes.
+
+### Eigener RSS-Reader
+Ich hoste FreshRSS — mein persönlicher News-Feed, keine Algorithmen, keine Werbung. Klein, aber ein echtes Alltagstool.
+
+### Musik-Streaming Server
+Ich deploye Navidrome — meine eigene Spotify-Alternative mit meiner eigenen Musikbibliothek. Läuft komplett auf meiner Infrastruktur.
+
+### Eigene Foto-Cloud
+Immich ist eine self-hosted Google Photos Alternative. Ich deploye es in Kubernetes mit persistentem Storage — echtes Endprodukt das Sinn macht.
+
+### Eigener VPN-Server
+Ich setze WireGuard in Kubernetes auf. Danach kann ich mich von überall sicher ins Netz einwählen — praktisch und technisch anspruchsvoll.
+
