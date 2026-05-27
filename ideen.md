@@ -35,7 +35,7 @@ Ich deploye Navidrome — meine eigene Spotify-Alternative mit meiner eigenen Mu
 ----
 
 ### Eigene Foto-Cloud
-Immich ist eine self-hosted Google Photos Alternative. Ich deploye es in Kubernetes mit persistentem Storage — echtes Endprodukt das Sinn macht.
+ich mache eine self-hosted Google Photos Alternative. Ich deploye es in Kubernetes mit persistentem Storage — echtes Endprodukt das Sinn macht.
 
 ----
 
