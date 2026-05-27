@@ -1,3 +1,5 @@
+### KI-Coach
+
 Ich entwickle einen intelligenten, cloudbasierten KI-Fitness-Coach.
 
 Die Idee: Meine Fitness-Daten von der Apple Watch (die Trainings) und vom Whoop-Band (Schlaf & Erholung) werden automatisch in einer Cloud-Datenbank gespeichert. Eine KI (OpenAI) analysiert diese Daten und erstellt mir einen massgeschneiderten Trainings- und Ernährungsplan (z.B. für einen Marathon).
