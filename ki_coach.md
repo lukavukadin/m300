@@ -7,3 +7,6 @@ Die Idee: Meine Fitness-Daten von der Apple Watch (die Trainings) und vom Whoop-
 Das Besondere ist, dass der Plan "lebt": Wenn Whoop mir morgens anzeigt, dass ich schlecht erholt bin, passt die KI den Tagesplan im Kalender automatisch an (z.B. weniger Training, mehr Schlaf und spezifische Ernährung).
 
 Das Ganze bediene ich über eine eigene Web-App (mit Streamlit) inklusive Dashboard, Kalenderansicht und einem direkten Chat mit dem KI-Coach.
+
+
+asdjflöasdlf
