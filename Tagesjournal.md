@@ -41,15 +41,15 @@
         
 - **Erreichte Resultate:**
     
-    - _O_
+    - Ich habe das GCP-Konto aktiviert und die CLIs lokal eingerichtet. Das GKE-Cluster mit 3 Nodes steht, und ich kann mich per `kubectl` erfolgreich von meinem PC aus damit verbinden.
 
 - **Aufgetretene Probleme & Reflexion:**
     
-    - _O_
+    - -
  
 - **Eingesetzte Ressourcen:**
     
-    - _O_
+    - Google Cloud Console, GKE Dokumentation, Google SDK Installationsanleitung.
 
 
 ##  11.06.2026 – Modulteiltag 4: Das Datenbank-Cluster

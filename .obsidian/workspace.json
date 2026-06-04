@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Wochenplanung.md",
+                "file": "Tagesjournal.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Wochenplanung"
+              "title": "Tagesjournal"
             }
           }
         ]
@@ -112,12 +112,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Wochenplanung.md",
+                "file": "Tagesjournal.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Ausgehende Links von Wochenplanung öffnen"
+              "title": "Ausgehende Links von Tagesjournal öffnen"
             }
           },
           {
@@ -188,7 +188,7 @@
     "Projekt-beschreibung.md",
     "Lernjournal.md",
     "Projektideen/ki_coach.md",
-    "Wochenplanung.md",
+    "Tagesjournal.md",
     "Projektideen/ideen.md",
     "git.md",
     "Unbenannt",
