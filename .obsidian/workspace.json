@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lernjournal.md",
+                "file": "Projekt-Planung.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lernjournal"
+              "title": "Projekt-Planung"
             }
           }
         ]
@@ -112,12 +112,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Lernjournal.md",
+                "file": "Projekt-Planung.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Ausgehende Links von Lernjournal öffnen"
+              "title": "Ausgehende Links von Projekt-Planung öffnen"
             }
           },
           {
@@ -184,17 +184,17 @@
   },
   "active": "ac7657ac84f79a4a",
   "lastOpenFiles": [
-    "Projekt-Planung.md",
-    "Lernjournal.md",
     "README.md",
+    "Projektideen/ki_coach.md",
+    "Lernjournal.md",
+    "Projekt-Planung.md",
+    "Projektideen/ideen.md",
     "git.md",
     "Unbenannt",
     "frontend",
     "backend",
     "infrastructure",
-    "Projektideen/ki_coach.md",
     "Unbenannt 1",
-    "Projektideen/ideen.md",
     "Unbenannt/desktop.ini",
     "Projektideen"
   ]
