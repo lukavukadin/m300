@@ -20,6 +20,7 @@ Das Ziel ist die Erstellung einer produktionsbereiten, cloud-nativen Infrastrukt
 ## 3. Erfüllung der Kriterien (Modul 300 V2)
 
 Dieses Projekt deckt folgende fortgeschrittene Themen der Kompetenzmatrix ab:
+
 *   **Kubernetes:** Pods, Deployments, Services, Ingress, PersistentVolumes.
 *   **DevOps / Skalierung:** Multi-Replica Deployment, Health Checks (Liveness/Readiness Probes).
 *   **Sicherheitskonzepte:** Automatisches SSL/TLS per Cert-Manager, Secret-Management für DB-Logins.

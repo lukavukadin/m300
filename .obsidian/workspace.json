@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Projekt-Planung.md",
+                "file": "Wochenplanung.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Projekt-Planung"
+              "title": "Wochenplanung"
             }
           }
         ]
@@ -112,12 +112,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Projekt-Planung.md",
+                "file": "Wochenplanung.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Ausgehende Links von Projekt-Planung öffnen"
+              "title": "Ausgehende Links von Wochenplanung öffnen"
             }
           },
           {
@@ -185,9 +185,10 @@
   "active": "ac7657ac84f79a4a",
   "lastOpenFiles": [
     "README.md",
-    "Projektideen/ki_coach.md",
+    "Projekt-beschreibung.md",
     "Lernjournal.md",
-    "Projekt-Planung.md",
+    "Projektideen/ki_coach.md",
+    "Wochenplanung.md",
     "Projektideen/ideen.md",
     "git.md",
     "Unbenannt",
