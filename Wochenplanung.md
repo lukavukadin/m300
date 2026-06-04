@@ -1,5 +1,5 @@
 
-## 📅 21.05.2026 – Modulteiltag 1: Einstieg & Orientierung
+## 21.05.2026 – Modulteiltag 1: Einstieg & Orientierung
 
 - **Geplante Tagesziele:**
     - Lernumgebung einrichten, Git-Repo erstellen und Idee für Projekt-Variante 2 (V2) definieren.
@@ -14,7 +14,7 @@
     - Modulunterlagen M300, Gitea Cluster-Dokumentation.
         
 
-## 📅 28.05.2026 – Modulteiltag 2: Theorie & Konzeptionierung
+##  28.05.2026 – Modulteiltag 2: Theorie & Konzeptionierung
 
 - **Geplante Tagesziele:**
     
@@ -33,7 +33,7 @@
     - [K8s Example Repo Kebohn](https://github.com/kebohn/k8s_example), K8s Storage Dokumentation.
     
 
-## 📅 04.06.2026 – Modulteiltag 3:  (Google Cloud & GKE Setup)
+##  04.06.2026 – Modulteiltag 3:  (Google Cloud & GKE Setup)
 
 - **Geplante Tagesziele:**
     
@@ -52,7 +52,7 @@
     - _O_
 
 
-## 📅 11.06.2026 – Modulteiltag 4: Das Datenbank-Cluster
+##  11.06.2026 – Modulteiltag 4: Das Datenbank-Cluster
 
 - **Geplante Tagesziele:**
     
@@ -71,7 +71,7 @@
     - _O_
         
 
-## 📅 18.06.2026 – Modulteiltag 5: Shared Storage & Gitea Frontend
+## 18.06.2026 – Modulteiltag 5: Shared Storage & Gitea Frontend
 
 - **Geplante Tagesziele:**
     
@@ -90,7 +90,7 @@
     - _O_
         
 
-## 📅 25.06.2026 – Modulteiltag 6: Ingress, Domain & SSL
+##  25.06.2026 – Modulteiltag 6: Ingress, Domain & SSL
 
 - **Geplante Tagesziele:**
     
@@ -109,7 +109,7 @@
     - _O_
         
 
-## 📅 02.07.2026 – Modulteiltag 7: Failover-Testing & Optimierung
+##  02.07.2026 – Modulteiltag 7: Failover-Testing & Optimierung
 
 - **Geplante Tagesziele:**
     
@@ -128,7 +128,7 @@
     - _O_
         
 
-## 📅 09.07.2026 – Modulteiltag 8: Abgabe & Finalisierung
+##  09.07.2026 – Modulteiltag 8: Abgabe & Finalisierung
 
 - **Geplante Tagesziele:**
     
