@@ -59,16 +59,13 @@
     - Bereitstellung eines hochverfügbaren PostgreSQL-Clusters in Kubernetes (mittels Helm und z.B. Bitnami PostgreSQL-HA).
         
 - **Erreichte Resultate:**
+    - Da die lokale CLI Rechte-Probleme machte, habe ich das GKE-Cluster (3 Nodes, e2-medium) erfolgreich direkt über die Google Cloud Web-Konsole erstellt. Die Vorbereitungen für das PostgreSQL-HA-Setup stehen.
     
-    - _O_
-        
 - **Aufgetretene Probleme & Reflexion:**
-    
-    - _O_
-        
+	- Die `gcloud`-CLI blockierte die API-Aktivierung wegen eines IAM-Konflikts. Der Wechsel auf die Web-Oberfläche als Workaround hat das Problem sofort gelöst
+
 - **Eingesetzte Ressourcen:**
-    
-    - _O_
+    - Google Cloud Web Console, GKE Dashboard, Bitnami PostgreSQL Helm-Dokumentation.
         
 
 ## 18.06.2026 – Modulteiltag 5: Shared Storage & Gitea Frontend

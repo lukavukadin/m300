@@ -20,6 +20,16 @@
               "icon": "lucide-file",
               "title": "Tagesjournal"
             }
+          },
+          {
+            "id": "03b71804b33745d2",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Neuer Tab"
+            }
           }
         ]
       }
@@ -184,11 +194,11 @@
   },
   "active": "ac7657ac84f79a4a",
   "lastOpenFiles": [
-    "README.md",
     "Projekt-beschreibung.md",
+    "Tagesjournal.md",
+    "README.md",
     "Lernjournal.md",
     "Projektideen/ki_coach.md",
-    "Tagesjournal.md",
     "Projektideen/ideen.md",
     "git.md",
     "Unbenannt",
