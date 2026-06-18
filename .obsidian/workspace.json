@@ -11,14 +11,12 @@
             "id": "ac7657ac84f79a4a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Tagesjournal.md",
-                "mode": "source",
-                "source": false
+                "file": "Bilder/gke_cluster.png"
               },
-              "icon": "lucide-file",
-              "title": "Tagesjournal"
+              "icon": "lucide-image",
+              "title": "gke_cluster"
             }
           },
           {
@@ -122,12 +120,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Tagesjournal.md",
+                "file": "Bilder/gke_cluster.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Ausgehende Links von Tagesjournal öffnen"
+              "title": "Ausgehende Links von gke_cluster öffnen"
             }
           },
           {
@@ -192,21 +190,37 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ac7657ac84f79a4a",
+  "active": "0343650201cd6a37",
   "lastOpenFiles": [
-    "Projekt-beschreibung.md",
     "Tagesjournal.md",
+    "Umsetzung.md",
+    "Bilder/gke_cluster.png",
+    "Bilder/postgress.png",
+    "Bilder/clusterissuer.png",
+    "Bilder/nginx.png",
+    "Bilder/vs_einblick.png",
+    "Bilder/get_pods.png",
+    "files.md",
     "README.md",
+    "files/main.tf",
+    "files/gitea-values.yaml",
+    "files/cluster-issuer.yaml",
+    "files/postgres-cluster.yaml",
+    "files/outputs.tf",
+    "files",
+    "Architektursdiagramm.md",
+    "Projekt-beschreibung.md",
+    "Bilder/cluster_erstellt.png",
+    "Bilder/hostpoint_eintrag.png",
+    "Bilder/gcloud_free_trial.png",
+    "Projektideen/ideen.md",
+    "Bilder/planung_m300.drawio.png",
+    "Bilder",
+    "Neuer Ordner",
     "Lernjournal.md",
     "Projektideen/ki_coach.md",
-    "Projektideen/ideen.md",
     "git.md",
-    "Unbenannt",
     "frontend",
-    "backend",
-    "infrastructure",
-    "Unbenannt 1",
-    "Unbenannt/desktop.ini",
-    "Projektideen"
+    "backend"
   ]
 }

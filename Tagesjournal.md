@@ -73,18 +73,18 @@
 - **Geplante Tagesziele:**
     
     - Google Cloud Filestore (NFS) als ReadWriteMany Storage einrichten. Gitea-Deployment mit 2 Replicas starten und mit der DB verbinden.
-        
+
 - **Erreichte Resultate:**
     
-    - _O_
-        
+    - Ich habe ein Architektursdiagramm erstellt, damit man sich das Projekt visuell besser vorstellen kann. Ich habe ebenfalls meine Doku aufgearbeitet, damit man sieht was ich Umgesetzt habe. [Hier klicken zur Umsetzung](Umsetzung.md)
+    
 - **Aufgetretene Probleme & Reflexion:**
     
-    - _O_
-        
+    - Ich wollte heute Google Cloud Filestore einrichten, aber es hatte probleme beim erstellen des Pods.
+    
 - **Eingesetzte Ressourcen:**
     
-    - _O_
+    - 
         
 
 ##  25.06.2026 – Modulteiltag 6: Ingress, Domain & SSL
