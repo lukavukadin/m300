@@ -34,7 +34,7 @@ Ich habe `terraform init` und `terraform apply` ausgeführt. Aufgetretene Proble
 
 Via Helm installiert (`ingress-nginx` Chart). Erstellt automatisch einen GCP Load Balancer mit öffentlicher IP-Adresse:
 
-![[nginx.png]]
+<img src="Bilder/nginx.png" width="600" />
    
 ---
 
@@ -42,15 +42,14 @@ Via Helm installiert (`ingress-nginx` Chart). Erstellt automatisch einen GCP Loa
 
 cert-manager via Helm installiert für automatische TLS-Zertifikate. `ClusterIssuer` für Let's Encrypt erstellt (`letsencrypt-prod`):
 
-![[clusterissuer.png]]
+<img src="Bilder/clusterissuer.png" width="600" />
 
 -----
 
 7. Schritt: DNS konfiguriert
 
 Bei Hostpoint einen A-Record erstellt: `git.lukavukadin.ch` → `34.53.135.70`:
-
-![[hostpoint_eintrag.png]]
+<img src="Bilder/hostpoint_eintrag.png" width="600" />
 
 ---
 
@@ -58,7 +57,8 @@ Bei Hostpoint einen A-Record erstellt: `git.lukavukadin.ch` → `34.53.135.70`:
 
 CloudNativePG Operator via Helm installiert. PostgreSQL-Cluster mit 1 Primary + 2 Replicas erstellt (`postgres-cluster.yaml`):
 
-![[postgress.png]]
+<img src="Bilder/postgress.png" width="600" />
+
 
 ---
 
