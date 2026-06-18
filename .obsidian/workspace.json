@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Umsetzung.md",
+                "file": "Architektursdiagramm.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Umsetzung"
+              "title": "Architektursdiagramm"
             }
           },
           {
@@ -122,12 +122,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Umsetzung.md",
+                "file": "Architektursdiagramm.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Ausgehende Links von Umsetzung öffnen"
+              "title": "Ausgehende Links von Architektursdiagramm öffnen"
             }
           },
           {
@@ -192,11 +192,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0343650201cd6a37",
+  "active": "ac7657ac84f79a4a",
   "lastOpenFiles": [
+    "Umsetzung.md",
+    "Architektursdiagramm.md",
+    "Projekt-beschreibung.md",
     "Bilder/Gitea_Pods_(Init-Phase).png",
     "Tagesjournal.md",
-    "Umsetzung.md",
     "Bilder/filestore.png",
     "Bilder/gcloud_free_trial.png",
     "Bilder/gke_cluster.png",
@@ -213,10 +215,7 @@
     "files/postgres-cluster.yaml",
     "files/outputs.tf",
     "files",
-    "Architektursdiagramm.md",
-    "Projekt-beschreibung.md",
     "Bilder/cluster_erstellt.png",
-    "Bilder/hostpoint_eintrag.png",
     "Projektideen/ideen.md",
     "Bilder",
     "Neuer Ordner",
