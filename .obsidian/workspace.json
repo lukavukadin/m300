@@ -11,12 +11,14 @@
             "id": "ac7657ac84f79a4a",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Bilder/gke_cluster.png"
+                "file": "Umsetzung.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "gke_cluster"
+              "icon": "lucide-file",
+              "title": "Umsetzung"
             }
           },
           {
@@ -120,12 +122,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Bilder/gke_cluster.png",
+                "file": "Umsetzung.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Ausgehende Links von gke_cluster öffnen"
+              "title": "Ausgehende Links von Umsetzung öffnen"
             }
           },
           {
@@ -190,11 +192,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0343650201cd6a37",
+  "active": "ac7657ac84f79a4a",
   "lastOpenFiles": [
-    "Tagesjournal.md",
+    "Bilder/gcloud_free_trial.png",
     "Umsetzung.md",
     "Bilder/gke_cluster.png",
+    "Tagesjournal.md",
     "Bilder/postgress.png",
     "Bilder/clusterissuer.png",
     "Bilder/nginx.png",
@@ -212,7 +215,6 @@
     "Projekt-beschreibung.md",
     "Bilder/cluster_erstellt.png",
     "Bilder/hostpoint_eintrag.png",
-    "Bilder/gcloud_free_trial.png",
     "Projektideen/ideen.md",
     "Bilder/planung_m300.drawio.png",
     "Bilder",
