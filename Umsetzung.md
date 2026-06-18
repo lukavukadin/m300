@@ -3,7 +3,7 @@
 
    Free Trial aktiviert, Projekt `m300-gitea` erstellt und die benötigten API's aktiviert (Compute Engine, Kubernetes Engine, Cloud DNS, Filestore). Lokal habe ich: gcloud CLI, Terraform, kubectl, Helm installliert. Bei GCP authentifiziert.
 
-![gcloud_free_trial](Bilder/gcloud_free_trial.png)
+<img src="Bilder/gcloud_free_trial.png" width="600" />
 
 ----
 2. Schritt: Terraform-Infrastruktur geschrieben:
@@ -11,20 +11,23 @@
     Drei Terraform-Files erstellt (`main.tf`, `variables.tf`, `outputs.tf`) die folgende Ressourcen definieren: VPC-Netzwerk, Subnetz mit sekundären IP-Bereichen für Pods/Services, GKE-Cluster, Node-Pool, Cloud DNS Zone, Filestore-Instanz.
     [Hier geht es zu den Files](files/)
 
-![[vs_einblick.png]]
+<img src="Bilder/vs_einblick.png" width="600" />
+
 
 ----
 3. Schritt: Terraform Apply (mit Problemlösung)
 
 Ich habe `terraform init` und `terraform apply` ausgeführt. Aufgetretene Probleme: fehlende API-Aktivierung im richtigen Projekt, SSD-Quota-Limit überschritten (Lösung: Wechsel von regionalem zu zonalem Cluster):
 
-![[cluster_erstellt.png]]
+<img src="Bilder/cluster_erstellt.png" width="600" />
+
 
 ----
 4. Schritt: kubectl mit GKE-Cluster verbunden
 `gcloud container clusters get-credentials` ausgeführt. Aufgetretenes Problem: TLS-Zertifikatsfehler durch Schul-Netzwerk/Proxy. Ich konnte es lösen indem ich auf Mobile-Hotspot gewechselt habe:
 
-![[gke_cluster.png]]
+<img src="Bilder/gke_cluster.png" width="600" />
+
 
 ---
 5. Schritt: Nginx Ingress Controller installiert

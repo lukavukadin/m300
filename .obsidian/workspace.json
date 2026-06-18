@@ -15,7 +15,7 @@
               "state": {
                 "file": "Umsetzung.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
               "title": "Umsetzung"
