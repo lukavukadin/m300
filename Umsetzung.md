@@ -1,5 +1,6 @@
 
-1. Schritt: GCP-Projekt & Tools einrichten
+1. Schritt: GCP-Projekt & Tools einrichten:
+
    Free Trial aktiviert, Projekt `m300-gitea` erstellt und die benötigten API's aktiviert (Compute Engine, Kubernetes Engine, Cloud DNS, Filestore). Lokal habe ich: gcloud CLI, Terraform, kubectl, Helm installliert. Bei GCP authentifiziert.
 
 ![gcloud_free_trial](Bilder/gcloud_free_trial.png)
