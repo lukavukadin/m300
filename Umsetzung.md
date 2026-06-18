@@ -13,7 +13,6 @@
 
 <img src="Bilder/vs_einblick.png" width="600" />
 
-
 ----
 3. Schritt: Terraform Apply (mit Problemlösung)
 
@@ -52,15 +51,24 @@ Bei Hostpoint einen A-Record erstellt: `git.lukavukadin.ch` → `34.53.135.70`:
 <img src="Bilder/hostpoint_eintrag.png" width="600" />
 
 ---
+8. Schritt: Filestore CSI Driver aktiviert
 
-8. Schritt: PostgreSQL-Cluster (CloudNativePG) installiert
+Ursprünglicher Gitea-Helm-Install schlug fehl wegen fehlender `ReadWriteMany`-StorageClass. Filestore-CSI-Driver auf dem Cluster aktiviert (`gcloud container clusters update --update-addons=GcpFilestoreCsiDriver=ENABLED`), wodurch `standard-rwx` StorageClass verfügbar wurde.
+
+<img src="Bilder/filestore.png" width="700" />
+
+----
+9. Schritt: PostgreSQL-Cluster (CloudNativePG) installiert
 
 CloudNativePG Operator via Helm installiert. PostgreSQL-Cluster mit 1 Primary + 2 Replicas erstellt (`postgres-cluster.yaml`):
 
 <img src="Bilder/postgress.png" width="600" />
 
-
 ---
 
+10. Schritt: Gitea via Helm installiert (in Bearbeitung)
    
+   Gitea-Konfiguration (`gitea-values.yaml`) erstellt mit Verbindung zu PostgreSQL-Primary (`gitea-postgres-rw`), TLS via cert-manager, 3 Replicas. Aktuelles Problem: Filestore-Mount hängt bei Init-Phase (`MountVolume.MountDevice failed ... Aborted`) — wird aktuell debuggt.
    
+   <img src="Bilder/Gitea_Pods_(Init-Phase).png" width="370" />
+

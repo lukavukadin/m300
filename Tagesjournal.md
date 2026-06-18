@@ -80,7 +80,7 @@
     
 - **Aufgetretene Probleme & Reflexion:**
     
-    - Ich wollte heute Google Cloud Filestore einrichten, aber es hatte probleme beim erstellen des Pods.
+
     
 - **Eingesetzte Ressourcen:**
     

@@ -192,12 +192,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ac7657ac84f79a4a",
+  "active": "0343650201cd6a37",
   "lastOpenFiles": [
-    "Bilder/gcloud_free_trial.png",
-    "Umsetzung.md",
-    "Bilder/gke_cluster.png",
+    "Bilder/Gitea_Pods_(Init-Phase).png",
     "Tagesjournal.md",
+    "Umsetzung.md",
+    "Bilder/filestore.png",
+    "Bilder/gcloud_free_trial.png",
+    "Bilder/gke_cluster.png",
     "Bilder/postgress.png",
     "Bilder/clusterissuer.png",
     "Bilder/nginx.png",
@@ -216,7 +218,6 @@
     "Bilder/cluster_erstellt.png",
     "Bilder/hostpoint_eintrag.png",
     "Projektideen/ideen.md",
-    "Bilder/planung_m300.drawio.png",
     "Bilder",
     "Neuer Ordner",
     "Lernjournal.md",
