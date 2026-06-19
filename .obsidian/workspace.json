@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Architektursdiagramm.md",
+                "file": "Tagesjournal.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Architektursdiagramm"
+              "title": "Tagesjournal"
             }
           },
           {
@@ -122,12 +122,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Architektursdiagramm.md",
+                "file": "Tagesjournal.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Ausgehende Links von Architektursdiagramm öffnen"
+              "title": "Ausgehende Links von Tagesjournal öffnen"
             }
           },
           {
@@ -192,14 +192,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0343650201cd6a37",
+  "active": "ac7657ac84f79a4a",
   "lastOpenFiles": [
-    "Bilder/planung_m300.jpg",
     "Umsetzung.md",
-    "Architektursdiagramm.md",
-    "Projekt-beschreibung.md",
-    "Bilder/Gitea_Pods_(Init-Phase).png",
     "Tagesjournal.md",
+    "README.md",
+    "Projekt-beschreibung.md",
+    "Architektursdiagramm.md",
+    "Bilder/planung_m300.jpg",
+    "Bilder/Gitea_Pods_(Init-Phase).png",
     "Bilder/filestore.png",
     "Bilder/gcloud_free_trial.png",
     "Bilder/gke_cluster.png",
@@ -209,14 +210,12 @@
     "Bilder/vs_einblick.png",
     "Bilder/get_pods.png",
     "files.md",
-    "README.md",
     "files/main.tf",
     "files/gitea-values.yaml",
     "files/cluster-issuer.yaml",
     "files/postgres-cluster.yaml",
     "files/outputs.tf",
     "files",
-    "Bilder/cluster_erstellt.png",
     "Projektideen/ideen.md",
     "Bilder",
     "Neuer Ordner",

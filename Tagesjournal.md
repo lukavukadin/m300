@@ -13,7 +13,7 @@
 - **Eingesetzte Ressourcen:**
     - Modulunterlagen M300, Gitea Cluster-Dokumentation.
         
-
+----
 ##  28.05.2026 – Modulteiltag 2: Theorie & Konzeptionierung
 
 - **Geplante Tagesziele:**
@@ -32,7 +32,7 @@
     
     - [K8s Example Repo Kebohn](https://github.com/kebohn/k8s_example), K8s Storage Dokumentation.
     
-
+----
 ##  04.06.2026 – Modulteiltag 3:  (Google Cloud & GKE Setup)
 
 - **Geplante Tagesziele:**
@@ -51,7 +51,7 @@
     
     - Google Cloud Console, GKE Dokumentation, Google SDK Installationsanleitung.
 
-
+----
 ##  11.06.2026 – Modulteiltag 4: Das Datenbank-Cluster
 
 - **Geplante Tagesziele:**
@@ -67,7 +67,7 @@
 - **Eingesetzte Ressourcen:**
     - Google Cloud Web Console, GKE Dashboard, Bitnami PostgreSQL Helm-Dokumentation.
         
-
+----
 ## 18.06.2026 – Modulteiltag 5: Shared Storage & Gitea Frontend
 
 - **Geplante Tagesziele:**
@@ -86,7 +86,7 @@
     
     - 
         
-
+----
 ##  25.06.2026 – Modulteiltag 6: Ingress, Domain & SSL
 
 - **Geplante Tagesziele:**
@@ -105,7 +105,7 @@
     
     - _O_
         
-
+----
 ##  02.07.2026 – Modulteiltag 7: Failover-Testing & Optimierung
 
 - **Geplante Tagesziele:**
@@ -124,7 +124,7 @@
     
     - _O_
         
-
+-----
 ##  09.07.2026 – Modulteiltag 8: Abgabe & Finalisierung
 
 - **Geplante Tagesziele:**
