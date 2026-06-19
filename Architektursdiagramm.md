@@ -1,1 +1,3 @@
-<img src="Bilder/planung_m300.drawio.png" width="600" />
+<img src="Bilder/planung_m300.jpg" width="600" />
+
+
