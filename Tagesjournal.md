@@ -53,9 +53,9 @@
 -  **Erreichte Resultate:**
     
     - GCP-Projekt erstellt, APIs aktiviert, Terraform-Files geschrieben (VPC, Subnetz, GKE-Cluster, DNS-Zone, Filestore). Cluster steht, alle 3 Nodes sind `Ready`. 
-      
-      → [[Umsetzung]] Schritte 1 – 4
-
+    
+	  [[Umsetzung.md|Umsetzung]] Schritte 1 - 4
+    
 - **Aufgetretene Probleme & Reflexion:**
     - APIs waren im falschen Projekt aktiviert, dann ein SSD-Quota-Limit gesprengt (gelöst durch zonalen statt regionalen Cluster), und ein Cluster liess sich wegen `deletion_protection` nicht löschen. Zusätzlich blockierte das Schulnetz die Verbindung zu Google – auf dem Hotspot lief's dann sofort.
  
