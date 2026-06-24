@@ -85,15 +85,16 @@ CloudNativePG Operator via Helm installiert. PostgreSQL-Cluster mit 1 Primary + 
 
 Beim manuellen Einbinden des PersistentVolumes gab es gleich zwei Folgefehler: Helm wollte das PVC nicht übernehmen (fehlende Ownership-Labels), und die Grösse passte nicht zur Helm-Konfiguration. Nach der Korrektur blieb das PVC dann im Status `Terminating` stecken - das liess sich nur lösen, indem ich den Kubernetes-Finalizer manuell per Patch entfernt habe.
 
-`PersistentVolume und PVC manuell erstellt, als Workaround für das Filestore-Volume:`
+`PV/PVC manuell erstellt als Workaround:`
 <img src="Bilder/gitea_pv_apply.png" width="450" />
 
-`Helm-Installation schlägt fehl: Konflikt zwischen manuellem PVC und Helms erwarteten Werten.`
+`Helm-Konflikt mit dem manuellen PVC`
 <img src="Bilder/apply_failed_with_gitea_values.png" width="990" />
 
-`Lösung: PV-Verknüpfung per Patch gelöst, Volume wieder Available für Helm:`
+`Lösung: Patch behebt den Konflikt, Volume wieder frei:`
 <img src="Bilder/patch_pvc.png" width="999" />
 
+----
 
 12. Schritt: Datenbank-Passwort-Mismatch behoben
 
