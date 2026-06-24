@@ -24,7 +24,7 @@
     
 - **Eingesetzte Ressourcen:**
     - Modulunterlagen M300, Gitea Cluster-Dokumentation.
-        
+    
 ----
 ##  28.05.2026 – Modulteiltag 2: Theorie & Konzeptionierung
 
@@ -60,23 +60,27 @@
     - APIs waren im falschen Projekt aktiviert, dann ein SSD-Quota-Limit gesprengt (gelöst durch zonalen statt regionalen Cluster), und ein Cluster liess sich wegen `deletion_protection` nicht löschen. Zusätzlich blockierte das Schulnetz die Verbindung zu Google – auf dem Hotspot lief's dann sofort.
  
 - **Eingesetzte Ressourcen:**
-    - Google Cloud Console, GKE Dokumentation, Google SDK Installationsanleitung.
+    - Terraform Dokumentation, GCP Console, gcloud CLI, kubectl.
 
 ----
 ##  11.06.2026 – Modulteiltag 4: Das Datenbank-Cluster
 
 - **Geplante Tagesziele:**
     
-    - Bereitstellung eines hochverfügbaren PostgreSQL-Clusters in Kubernetes (mittels Helm und z.B. Bitnami PostgreSQL-HA).
-        
+    - Nginx Ingress installieren
+    - cert-manager mit Let's Encrypt einrichten
+    - DNS-Eintrag erstellen.
+    
 - **Erreichte Resultate:**
-    - Da die lokale CLI Rechte-Probleme machte, habe ich das GKE-Cluster (3 Nodes, e2-medium) erfolgreich direkt über die Google Cloud Web-Konsole erstellt. Die Vorbereitungen für das PostgreSQL-HA-Setup stehen.
+    - Nginx Ingress via Helm installiert (mit automatischem Load Balancer + öffentlicher IP), cert-manager + ClusterIssuer für Let's Encrypt eingerichtet, A-Record bei Hostpoint gesetzt.
+    
+    -  [Umsetzung](./Umsetzung.md) Schritte 5–7
     
 - **Aufgetretene Probleme & Reflexion:**
-	- Die `gcloud`-CLI blockierte die API-Aktivierung wegen eines IAM-Konflikts. Der Wechsel auf die Web-Oberfläche als Workaround hat das Problem sofort gelöst
+	- Lief diesmal ohne grössere Probleme durch, da das Netzwerkproblem von letzer Woche schon gelöst war.
 
 - **Eingesetzte Ressourcen:**
-    - Google Cloud Web Console, GKE Dashboard, Bitnami PostgreSQL Helm-Dokumentation.
+	- Helm Dokumentation, cert-manager Dokumentation, Hostpoint DNS-Verwaltung
         
 ----
 ## 18.06.2026 – Modulteiltag 5: Shared Storage & Gitea Frontend
