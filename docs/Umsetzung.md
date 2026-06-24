@@ -174,7 +174,7 @@ Nach dem Hochskalieren auf 3 Replicas habe ich einen Pod-Ausfall simuliert, um d
 - Dann wurde ein neuer Pod `gitea-759f75554f-pg9vw` erstellt und gestartet:
 <img src="/images/pod_erfolgreich_gestartet.png" width="500" />
 
-Hier sieht man den Test Live:
+- Hier sieht man den Test Live:
 
 <img src="/images/erfolgreicher_failover_test.gif" alt="Failover Test" width="100%">
 
@@ -184,4 +184,17 @@ Hier sieht man den Test Live:
 
 Anschliessend habe ich den Datenbank-Failover getestet. Ich habe geprüft, welcher PostgreSQL-Pod aktuell der Primary ist, diesen gelöscht und beobachtet, wie CloudNativePG automatisch eine Replica zum neuen Primary befördert. Während des gesamten Vorgangs (ca. 3:46 Minuten) habe ich wiederholt versucht, mich bei Gitea einzuloggen - der Login funktionierte durchgehend ohne Unterbruch.
 
-<img src="/images/gitea_postgres_primary.png" width="700" />
+- `gitea-postgres-2` ist der Primary:
+<img src="/images/gitea_postgres_primary.png" width="550" />
+
+
+- Primary gelöscht:
+<img src="/images/primary_gelöscht.png" width="550" />
+
+- Hier sieht man den automatischen Prozess von Kubernetes und zwar wie er dem 'gitea-postgres-1' die rolle Primary zuteilt und wie der neue pod erstellt und gestartet wird:
+
+<img src="/images/postgres_primary_wechsel.png" width="750" />
+
+- Alle Pods sind nach kurzer Zeit wieder auf den Beinen:
+
+<img src="/images/erfolgreicher_postgres_failover.png" width="750" />
