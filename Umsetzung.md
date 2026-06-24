@@ -74,7 +74,7 @@ CloudNativePG Operator via Helm installiert. PostgreSQL-Cluster mit 1 Primary + 
 
    <img src="Bilder/Gitea_Pods_(Init-Phase).png" width="370" />
 
-   - Fehler beim Mounten
+- Fehler beim Mounten
 
 <img src="Bilder/warning_Failedmount.png" width="750" />
 
