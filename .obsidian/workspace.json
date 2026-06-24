@@ -210,6 +210,8 @@
   "active": "0be6b8c4a537aece",
   "lastOpenFiles": [
     "images/erfolgreicher_failover_test.mp4",
+    "images/erfolgreicher_failover_test.mp4",
+    "docs/Umsetzung.md",
     "images/pod_erfolgreich_gestartet.png",
     "images/pod_gelöscht.png",
     "images/replicacount_3.png",
@@ -217,7 +219,6 @@
     "images/drei_gitea_pods_am_laufen.png",
     "Architektursdiagramm.md",
     "docs/Tagesjournal.md",
-    "docs/Umsetzung.md",
     "docs/Projektkonzept.md",
     "README.md",
     "files.md",
@@ -238,7 +239,6 @@
     "Neuer Ordner",
     "Lernjournal.md",
     "Projektideen/ki_coach.md",
-    "git.md",
-    "frontend"
+    "git.md"
   ]
 }
