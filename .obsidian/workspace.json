@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tagesjournal.md",
+                "file": "docs/Tagesjournal.md",
                 "mode": "source",
                 "source": false
               },
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tagesjournal.md",
+                "file": "Architektursdiagramm.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tagesjournal"
+              "title": "Architektursdiagramm"
             }
           },
           {
@@ -137,12 +137,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Tagesjournal.md",
+                "file": "Architektursdiagramm.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Ausgehende Links von Tagesjournal öffnen"
+              "title": "Ausgehende Links von Architektursdiagramm öffnen"
             }
           },
           {
@@ -209,35 +209,35 @@
   },
   "active": "0be6b8c4a537aece",
   "lastOpenFiles": [
-    "Umsetzung.md",
-    "Tagesjournal.md",
-    "Architektursdiagramm.md",
-    "Pasted image 20260624134451.png",
-    "Projekt-beschreibung.md",
     "README.md",
-    "Bilder/erfolgreich_eingeloggt.png",
-    "Bilder/cloudflare_record.png",
-    "Bilder/git_erreichbar_ueber_domain.png",
-    "Bilder/patch_pvc.png",
-    "Bilder/warning_Failedmount 1.png",
-    "Bilder/apply_failed_with_gitea_values.png",
-    "Bilder/gitea_pv_apply.png",
-    "Bilder/warning_Failedmount.png",
-    "Bilder/gitea_shared_bound.png",
+    "docs/Projektkonzept.md",
+    "Architektursdiagramm.md",
+    "docs/Tagesjournal.md",
+    "docs/Umsetzung.md",
     "files.md",
+    "docs",
+    "Pasted image 20260624134451.png",
+    "images/erfolgreich_eingeloggt.png",
+    "images/cloudflare_record.png",
+    "images/git_erreichbar_ueber_domain.png",
+    "images/patch_pvc.png",
+    "Bilder/warning_Failedmount 1.png",
+    "images/apply_failed_with_gitea_values.png",
+    "images/gitea_pv_apply.png",
+    "images/warning_Failedmount.png",
+    "images/gitea_shared_bound.png",
     "files/main.tf",
     "files/gitea-values.yaml",
     "files/cluster-issuer.yaml",
     "files/postgres-cluster.yaml",
     "files/outputs.tf",
     "files",
-    "Projektideen/ideen.md",
-    "Bilder",
+    "ideas/ideen.md",
+    "images",
     "Neuer Ordner",
     "Lernjournal.md",
     "Projektideen/ki_coach.md",
     "git.md",
-    "frontend",
-    "backend"
+    "frontend"
   ]
 }

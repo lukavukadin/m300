@@ -1,4 +1,4 @@
-# Projektbeschreibung Modul 300 - V2
+# Projektkonzept Modul 300 - V2
 
 **Projektname:** High-Availability Gitea Deployment in der Google Cloud mittels Kubernetes (GKE)
 **Datum:** Juni 2026
