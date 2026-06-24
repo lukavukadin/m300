@@ -176,7 +176,7 @@ Nach dem Hochskalieren auf 3 Replicas habe ich einen Pod-Ausfall simuliert, um d
 
 Hier sieht man den Test Live:
 
-[Video: Erfolgreicher Failover Test](/erfolgreicher_failover_test.mp4)
+<video src="erfolgreicher_failover_test.mp4" controls="controls" width="600"></video>
 
 
 ---
