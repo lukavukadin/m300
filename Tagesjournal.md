@@ -1,4 +1,16 @@
+# Lernjournal – Modul 300
 
+|                     |                                              |
+| ------------------- | -------------------------------------------- |
+| **Lernender**       | Luka Vukadin                                 |
+| **Modul**           | M300 – Cloudbasierter Service                |
+| **Projekttitel**    | Hochverfügbares Gitea auf GCP mit Kubernetes |
+| **Projektvariante** | V2 - Eigenes Projekt mit neuen Technologien  |
+| **Zeitraum**        | 21.05.2026 – 09.07.2026                      |
+| **Cloud-Plattform** | Google Cloud Platform (GCP)                  |
+| **Domain**          | git.lukavukadin.ch                           |
+
+----
 ## 21.05.2026 – Modulteiltag 1: Einstieg & Orientierung
 
 - **Geplante Tagesziele:**
@@ -17,38 +29,37 @@
 ##  28.05.2026 – Modulteiltag 2: Theorie & Konzeptionierung
 
 - **Geplante Tagesziele:**
-    
-    - Den Theorie-Input der Lehrperson verstehen. Anforderungen für die Gitea-Architektur recherchieren.
-        
+	- Den Theorie-Input der Lehrperson verstehen.
+	- Anforderungen für die Gitea-Architektur recherchieren.
+
 - **Erreichte Resultate:**
-    
     - Ich habe das Kubernetes-Klassenbeispiel analysiert. Ich habe mich theoretisch eingelesen, wie Gitea mit mehreren Frontends umgehen kann.
-        
+  
 - **Aufgetretene Probleme & Reflexion:**
-    
     - Ich habe gemerkt, dass Standard-Cloud-Speicher (ReadWriteOnce) für mein Vorhaben nicht ausreicht. Wenn mehrere Gitea-Pods auf dieselben Daten zugreifen, brauche ich zwingend einen Shared Storage (ReadWriteMany).
-    
+
 - **Eingesetzte Ressourcen:**
-    
     - [K8s Example Repo Kebohn](https://github.com/kebohn/k8s_example), K8s Storage Dokumentation.
-    
+
 ----
 ##  04.06.2026 – Modulteiltag 3:  (Google Cloud & GKE Setup)
 
 - **Geplante Tagesziele:**
+    - Terraform lokal installieren und GCP Provider konfigurieren.
+	- Terraform-Code für VPC, Subnetz, GKE-Cluster und Cloud DNS schreiben.
+	- GKE-Cluster mit `terraform apply` auf GCP deployen.
+	- Zugriff auf Cluster mit kubectl verifizieren (`kubectl get nodes`).
+
+-  **Erreichte Resultate:**
     
-    - Google Cloud (GCP) Zugang einrichten, lokale Tools (`gcloud`, `kubectl`) installieren und mein GKE-Cluster erstellen.
-        
-- **Erreichte Resultate:**
-    
-    - Ich habe das GCP-Konto aktiviert und die CLIs lokal eingerichtet. Das GKE-Cluster mit 3 Nodes steht, und ich kann mich per `kubectl` erfolgreich von meinem PC aus damit verbinden.
+    - GCP-Projekt erstellt, APIs aktiviert, Terraform-Files geschrieben (VPC, Subnetz, GKE-Cluster, DNS-Zone, Filestore). Cluster steht, alle 3 Nodes sind `Ready`. 
+      
+      → [[Umsetzung]] Schritte 1 – 4
 
 - **Aufgetretene Probleme & Reflexion:**
-    
-    - -
+    - APIs waren im falschen Projekt aktiviert, dann ein SSD-Quota-Limit gesprengt (gelöst durch zonalen statt regionalen Cluster), und ein Cluster liess sich wegen `deletion_protection` nicht löschen. Zusätzlich blockierte das Schulnetz die Verbindung zu Google – auf dem Hotspot lief's dann sofort.
  
 - **Eingesetzte Ressourcen:**
-    
     - Google Cloud Console, GKE Dokumentation, Google SDK Installationsanleitung.
 
 ----
@@ -76,7 +87,7 @@
 
 - **Erreichte Resultate:**
     
-    - Ich habe ein Architektursdiagramm erstellt, damit man sich das Projekt visuell besser vorstellen kann. Ich habe ebenfalls meine Doku aufgearbeitet, damit man sieht was ich Umgesetzt habe. [Hier klicken zur Umsetzung](Umsetzung.md)
+    - Ich habe ein [[Architektursdiagramm]] erstellt, damit man sich das Projekt visuell besser vorstellen kann. Ich habe ebenfalls meine Doku aufgearbeitet, damit man sieht was ich Umgesetzt habe. [Hier klicken zur Umsetzung](Umsetzung.md)
     
 - **Aufgetretene Probleme & Reflexion:**
     

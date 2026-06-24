@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Umsetzung.md",
+                "file": "Tagesjournal.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Umsetzung"
+              "title": "Tagesjournal"
             }
           },
           {
@@ -122,12 +122,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Umsetzung.md",
+                "file": "Tagesjournal.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Ausgehende Links von Umsetzung öffnen"
+              "title": "Ausgehende Links von Tagesjournal öffnen"
             }
           },
           {
@@ -194,12 +194,12 @@
   },
   "active": "ac7657ac84f79a4a",
   "lastOpenFiles": [
-    "Bilder/erfolgreich_eingeloggt.png",
     "Umsetzung.md",
+    "Tagesjournal.md",
+    "Bilder/erfolgreich_eingeloggt.png",
     "Bilder/cloudflare_record.png",
     "Bilder/git_erreichbar_ueber_domain.png",
     "Bilder/patch_pvc.png",
-    "Tagesjournal.md",
     "Bilder/warning_Failedmount 1.png",
     "Bilder/apply_failed_with_gitea_values.png",
     "Bilder/gitea_pv_apply.png",
