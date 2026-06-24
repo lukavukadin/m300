@@ -179,4 +179,9 @@ Hier sieht man den Test Live:
 <img src="/images/erfolgreicher_failover_test.gif" alt="Failover Test" width="100%">
 
 ---
+<br>
+### 15. Schritt: Failover-Test -PostgreSQL-Primary gelöscht, automatischer Wechsel
 
+Anschliessend habe ich den Datenbank-Failover getestet. Ich habe geprüft, welcher PostgreSQL-Pod aktuell der Primary ist, diesen gelöscht und beobachtet, wie CloudNativePG automatisch eine Replica zum neuen Primary befördert. Während des gesamten Vorgangs (ca. 3:46 Minuten) habe ich wiederholt versucht, mich bei Gitea einzuloggen - der Login funktionierte durchgehend ohne Unterbruch.
+
+<img src="/images/gitea_postgres_primary.png" width="700" />

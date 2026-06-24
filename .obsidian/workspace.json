@@ -207,8 +207,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0be6b8c4a537aece",
+  "active": "0343650201cd6a37",
   "lastOpenFiles": [
+    "images/gitea_postgres_primary.png",
     "images/erfolgreicher_failover_test.gif",
     "erfolgreicher_failover_test2.gif",
     "erfolgreicher_failover_test.mp4",
@@ -227,7 +228,6 @@
     "Pasted image 20260624134451.png",
     "images/erfolgreich_eingeloggt.png",
     "images/cloudflare_record.png",
-    "images/git_erreichbar_ueber_domain.png",
     "files/main.tf",
     "files/gitea-values.yaml",
     "files/cluster-issuer.yaml",
