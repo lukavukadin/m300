@@ -15,7 +15,7 @@ Als erstes habe ich ein [[Architektursdiagramm]] erstellt und konnte so nachdenk
 
    Free Trial aktiviert, Projekt `m300-gitea` erstellt und die benötigten API's aktiviert (Compute Engine, Kubernetes Engine, Cloud DNS, Filestore). Lokal habe ich: gcloud CLI, Terraform, kubectl, Helm installliert. Bei GCP authentifiziert.
 
-<img src="images/gcloud_free_trial.png" width="600" />
+<img src="/images/gcloud_free_trial.png" width="600" />
 
 ----
 <br>
@@ -34,7 +34,7 @@ Drei Terraform-Files erstellt (`main.tf`, `variables.tf`, `outputs.tf`) die folg
 
 Ich habe `terraform init` und `terraform apply` ausgeführt. Aufgetretene Probleme: fehlende API-Aktivierung im richtigen Projekt, SSD-Quota-Limit überschritten (Lösung: Wechsel von regionalem zu zonalem Cluster):
 
-<img src="images/cluster_erstellt.png" width="600" />
+<img src="/images/cluster_erstellt.png" width="600" />
 
 
 ----
@@ -44,7 +44,7 @@ Ich habe `terraform init` und `terraform apply` ausgeführt. Aufgetretene Proble
 
 `gcloud container clusters get-credentials` ausgeführt. Aufgetretenes Problem: TLS-Zertifikatsfehler durch Schul-Netzwerk/Proxy. Ich konnte es lösen indem ich auf Mobile-Hotspot gewechselt habe:
 
-<img src="images/gke_cluster.png" width="600" />
+<img src="/images/gke_cluster.png" width="600" />
 
 
 ---
@@ -54,7 +54,7 @@ Ich habe `terraform init` und `terraform apply` ausgeführt. Aufgetretene Proble
 
 Via Helm installiert (`ingress-nginx` Chart). Erstellt automatisch einen GCP Load Balancer mit öffentlicher IP-Adresse:
 
-<img src="images/nginx.png" width="600" />
+<img src="/images/nginx.png" width="600" />
    
 ---
 <br>
@@ -63,7 +63,7 @@ Via Helm installiert (`ingress-nginx` Chart). Erstellt automatisch einen GCP Loa
 
 cert-manager via Helm installiert für automatische TLS-Zertifikate. `ClusterIssuer` für Let's Encrypt erstellt (`letsencrypt-prod`):
 
-<img src="images/clusterissuer.png" width="600" />
+<img src="/images/clusterissuer.png" width="600" />
 
 -----
 <br>
@@ -71,7 +71,7 @@ cert-manager via Helm installiert für automatische TLS-Zertifikate. `ClusterIss
 ### 8. Schritt: DNS konfiguriert
 
 Bei Hostpoint einen A-Record erstellt: `git.lukavukadin.ch` → `34.53.135.70`:
-<img src="images/hostpoint_eintrag.png" width="600" />
+<img src="/images/hostpoint_eintrag.png" width="600" />
 
 ---
 <br>
@@ -80,7 +80,7 @@ Bei Hostpoint einen A-Record erstellt: `git.lukavukadin.ch` → `34.53.135.70`:
 
 Ursprünglicher Gitea-Helm-Install schlug fehl wegen fehlender `ReadWriteMany`-StorageClass. Filestore-CSI-Driver auf dem Cluster aktiviert (`gcloud container clusters update --update-addons=GcpFilestoreCsiDriver=ENABLED`), wodurch `standard-rwx` StorageClass verfügbar wurde.
 
-<img src="images/filestore.png" width="700" />
+<img src="/images/filestore.png" width="700" />
 
 ----
 <br>
@@ -89,7 +89,7 @@ Ursprünglicher Gitea-Helm-Install schlug fehl wegen fehlender `ReadWriteMany`-S
 
 CloudNativePG Operator via Helm installiert. PostgreSQL-Cluster mit 1 Primary + 2 Replicas erstellt (`postgres-cluster.yaml`):
 
-<img src="images/postgress.png" width="600" />
+<img src="/images/postgress.png" width="600" />
 
 ---
 <br>
@@ -100,15 +100,15 @@ CloudNativePG Operator via Helm installiert. PostgreSQL-Cluster mit 1 Primary + 
    
 - Hier sieht man die Drei Gitea-Pods am fest hängen:
 
-   <img src="images/Gitea_Pods_(Init-Phase).png" width="370" />
+   <img src="/images/Gitea_Pods_(Init-Phase).png" width="370" />
 
 - Fehler beim Mounten
 
-<img src="images/warning_Failedmount.png" width="750" />
+<img src="/images/warning_Failedmount.png" width="750" />
 
 - Lösung: ~gitea-shared-storage erfolgreich gebunden (RWX, standard-rwx):
 
-<img src="images/gitea_shared_bound.png" width="850" />
+<img src="/images/gitea_shared_bound.png" width="850" />
 
 ----
 <br>
@@ -119,15 +119,15 @@ Beim manuellen Einbinden des PersistentVolumes gab es gleich zwei Folgefehler: H
 
 - PV/PVC manuell erstellt als Workaround:				
 
-<img src="images/gitea_pv_apply.png" width="450" />
+<img src="/images/gitea_pv_apply.png" width="450" />
 
 - Helm-Konflikt mit dem manuellen PVC	
 
-<img src="images/apply_failed_with_gitea_values.png" width="990" />
+<img src="/images/apply_failed_with_gitea_values.png" width="990" />
 
 - Lösung: Patch behebt den Konflikt, Volume wieder frei:	
 
-<img src="images/patch_pvc.png" width="999" />
+<img src="/images/patch_pvc.png" width="999" />
 
 ----
 <br>
@@ -140,17 +140,17 @@ Grund: Ich habe vergessen das ich meine Domain zusätzlich über Cloudflare verw
 
 - A-Record in Cloudflare erstellt:
 
-<img src="images/cloudflare_record.png" width="400" />
+<img src="/images/cloudflare_record.png" width="400" />
 
 
 - Gitea unter `git.lukavukadin.ch` erreichbar:
 
-<img src="images/git_erreichbar_ueber_domain.png" width="900" />
+<img src="/images/git_erreichbar_ueber_domain.png" width="900" />
 
 
 
 - Erfolgreich als Admin eingeloggt:
 
-<img src="images/erfolgreich_eingeloggt.png" width="900" />
+<img src="/images/erfolgreich_eingeloggt.png" width="900" />
 
 ----

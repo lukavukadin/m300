@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Umsetzung.md",
+                "file": "Architektursdiagramm.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "Umsetzung"
+              "title": "Architektursdiagramm"
             }
           },
           {
@@ -137,12 +137,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/Umsetzung.md",
+                "file": "Architektursdiagramm.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Ausgehende Links von Umsetzung öffnen"
+              "title": "Ausgehende Links von Architektursdiagramm öffnen"
             }
           },
           {
@@ -209,9 +209,9 @@
   },
   "active": "0be6b8c4a537aece",
   "lastOpenFiles": [
-    "docs/Projektkonzept.md",
     "docs/Tagesjournal.md",
     "docs/Umsetzung.md",
+    "docs/Projektkonzept.md",
     "Architektursdiagramm.md",
     "README.md",
     "files.md",

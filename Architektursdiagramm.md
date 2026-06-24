@@ -1,3 +1,3 @@
-<img src="images/planung_m300.jpg" width="600" />
+<img src="/images/planung_m300.jpg" width="600" />
 
 
