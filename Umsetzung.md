@@ -18,6 +18,7 @@ Drei Terraform-Files erstellt (`main.tf`, `variables.tf`, `outputs.tf`) die folg
 
 ----
 <br>
+
 ### 3. Schritt: Terraform Apply (mit Problemlösung)
 
 Ich habe `terraform init` und `terraform apply` ausgeführt. Aufgetretene Probleme: fehlende API-Aktivierung im richtigen Projekt, SSD-Quota-Limit überschritten (Lösung: Wechsel von regionalem zu zonalem Cluster):
