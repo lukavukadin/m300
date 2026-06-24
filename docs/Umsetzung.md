@@ -6,7 +6,7 @@
 
 Als erstes habe ich ein [[Architektursdiagramm]] erstellt und konnte so nachdenken und überlegen wie ich mein Projekt aufgebaut werden soll
 
-<img src="images/planung_m300.jpg" width="600" />
+<img src="/images/planung_m300.jpg" width="600" />
 
 ----
 <br>
