@@ -87,27 +87,33 @@
 
 - **Geplante Tagesziele:**
     
-    - Google Cloud Filestore (NFS) als ReadWriteMany Storage einrichten. Gitea-Deployment mit 2 Replicas starten und mit der DB verbinden.
+    - Filestore als Shared Storage einbinden
+    - PostgreSQL-Cluster deployen
+    - Gitea installieren und über die Domain testen.
 
 - **Erreichte Resultate:**
     
-    - Ich habe ein [[Architektursdiagramm]] erstellt, damit man sich das Projekt visuell besser vorstellen kann. Ich habe ebenfalls meine Doku aufgearbeitet, damit man sieht was ich Umgesetzt habe. [Hier klicken zur Umsetzung](Umsetzung.md)
+    - Filestore-CSI-Driver aktiviert, PostgreSQL-Cluster (1 Primary + 2 Replicas) läuft, Gitea erfolgreich deployt. 
+    
+    - Gitea ist unter `https://git.lukavukadin.ch` erreichbar, mit gültigem HTTPS und funktionierendem Admin-Login. 
+    
+    - [Umsetzung](./Umsetzung.md) Schritte 8–12
     
 - **Aufgetretene Probleme & Reflexion:**
-    
+	- Das war eindeutig der härteste Teil und hat sich über Tage gezogen. Zuerst hat ein Bug im Filestore-Treiber den Mount blockiert, am Ende half nur das bestehende Filestore-Volume von Hand einzubinden. Kaum war das gelöst, gab es Probleme mit Helm und einem PVC, das sich nicht löschen liess. Zum Schluss hat mich die Domain nochmal ausgebremst, weil ich vergessen hatte, dass Cloudflare meine DNS-Einträge überschreibt.
 
     
 - **Eingesetzte Ressourcen:**
-    
-    - 
-        
+    - CloudNativePG Dokumentation, Gitea Helm Chart, GCP Filestore Dokumentation, Cloudflare DNS-Verwaltung
+
 ----
 ##  25.06.2026 – Modulteiltag 6: Ingress, Domain & SSL
 
 - **Geplante Tagesziele:**
+    - Gitea auf 3 Replicas skalieren
+    - HPA konfigurieren
+    - Failover-Tests (Pod- und DB-Ausfall) durchführen.
     
-    - Nginx-Ingress-Controller installieren. Meine eigene Domain via DNS auf den Google Load Balancer zeigen lassen. SSL via Let's Encrypt einrichten.
-        
 - **Erreichte Resultate:**
     
     - _O_
@@ -125,8 +131,9 @@
 
 - **Geplante Tagesziele:**
     
-    - Testkonzept durchführen: Einen Gitea-Pod im Betrieb löschen und prüfen, ob die Webseite online bleibt (Load Balancing Test). DB-Ausfall simulieren.
-        
+    - GitHub Actions Pipeline für automatisches Deployment einrichten
+    - Rolling Update testen.
+    
 - **Erreichte Resultate:**
     
     - _O_
@@ -143,9 +150,10 @@
 ##  09.07.2026 – Modulteiltag 8: Abgabe & Finalisierung
 
 - **Geplante Tagesziele:**
+    - Doku fertigstellen
+    - Repo aufräumen
+    - Projekt abgeben und präsentieren.
     
-    - Technische Dokumentation fertig schreiben, Selbsteinschätzung ausfüllen, Repo aufräumen und Projekt in Teams final abgeben.
-        
 - **Erreichte Resultate:**
     
     - _O_
