@@ -155,6 +155,7 @@ Grund: Ich habe vergessen das ich meine Domain zusätzlich über Cloudflare verw
 
 ----
 <br>
+
 ### 14. Schritt: Failover-Test - Gitea-Pod gelöscht, Webseite blieb online
 
 Nach dem Hochskalieren auf 3 Replicas habe ich einen Pod-Ausfall simuliert, um die Hochverfügbarkeit zu testen. Ich habe einen laufenden Gitea-Pod manuell gelöscht und parallel die Webseite im Browser mehrmals neu geladen. Kubernetes hat sofort einen Ersatz-Pod erstellt, die Webseite war zu keinem Zeitpunkt nicht erreichbar.
@@ -185,6 +186,7 @@ Nach dem Hochskalieren auf 3 Replicas habe ich einen Pod-Ausfall simuliert, um d
 
 ---
 <br>
+
 ### 15. Schritt: Failover-Test -PostgreSQL-Primary gelöscht, automatischer Wechsel
 
 Anschliessend habe ich den Datenbank-Failover getestet. Ich habe geprüft, welcher PostgreSQL-Pod aktuell der Primary ist, diesen gelöscht und beobachtet, wie CloudNativePG automatisch eine Replica zum neuen Primary befördert. Während des gesamten Vorgangs (ca. 3:46 Minuten) habe ich wiederholt versucht, mich bei Gitea einzuloggen - der Login funktionierte durchgehend ohne Unterbruch.
