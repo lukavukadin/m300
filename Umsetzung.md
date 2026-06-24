@@ -9,6 +9,7 @@
 
 ----
 <br>
+
 ### 2. Schritt: Terraform-Infrastruktur geschrieben:
 
 Drei Terraform-Files erstellt (`main.tf`, `variables.tf`, `outputs.tf`) die folgende Ressourcen definieren: VPC-Netzwerk, Subnetz mit sekundären IP-Bereichen für Pods/Services, GKE-Cluster, Node-Pool, Cloud DNS Zone, Filestore-Instanz.
@@ -28,6 +29,7 @@ Ich habe `terraform init` und `terraform apply` ausgeführt. Aufgetretene Proble
 
 ----
 <br>
+
 ### 4. Schritt: kubectl mit GKE-Cluster verbunden
 
 `gcloud container clusters get-credentials` ausgeführt. Aufgetretenes Problem: TLS-Zertifikatsfehler durch Schul-Netzwerk/Proxy. Ich konnte es lösen indem ich auf Mobile-Hotspot gewechselt habe:
@@ -37,6 +39,7 @@ Ich habe `terraform init` und `terraform apply` ausgeführt. Aufgetretene Proble
 
 ---
 <br>
+
 ### 5. Schritt: Nginx Ingress Controller installiert
 
 Via Helm installiert (`ingress-nginx` Chart). Erstellt automatisch einen GCP Load Balancer mit öffentlicher IP-Adresse:
@@ -45,6 +48,7 @@ Via Helm installiert (`ingress-nginx` Chart). Erstellt automatisch einen GCP Loa
    
 ---
 <br>
+
 ### 6. Schritt: cert-manager installiert + ClusterIssuer konfiguriert
 
 cert-manager via Helm installiert für automatische TLS-Zertifikate. `ClusterIssuer` für Let's Encrypt erstellt (`letsencrypt-prod`):
@@ -53,6 +57,7 @@ cert-manager via Helm installiert für automatische TLS-Zertifikate. `ClusterIss
 
 -----
 <br>
+
 ### 7. Schritt: DNS konfiguriert
 
 Bei Hostpoint einen A-Record erstellt: `git.lukavukadin.ch` → `34.53.135.70`:
@@ -60,6 +65,7 @@ Bei Hostpoint einen A-Record erstellt: `git.lukavukadin.ch` → `34.53.135.70`:
 
 ---
 <br>
+
 ### 8. Schritt: Filestore CSI Driver aktiviert
 
 Ursprünglicher Gitea-Helm-Install schlug fehl wegen fehlender `ReadWriteMany`-StorageClass. Filestore-CSI-Driver auf dem Cluster aktiviert (`gcloud container clusters update --update-addons=GcpFilestoreCsiDriver=ENABLED`), wodurch `standard-rwx` StorageClass verfügbar wurde.
@@ -68,6 +74,7 @@ Ursprünglicher Gitea-Helm-Install schlug fehl wegen fehlender `ReadWriteMany`-S
 
 ----
 <br>
+
 ### 9. Schritt: PostgreSQL-Cluster (CloudNativePG) installiert
 
 CloudNativePG Operator via Helm installiert. PostgreSQL-Cluster mit 1 Primary + 2 Replicas erstellt (`postgres-cluster.yaml`):
@@ -76,6 +83,7 @@ CloudNativePG Operator via Helm installiert. PostgreSQL-Cluster mit 1 Primary + 
 
 ---
 <br>
+
 ### 10. Schritt: Gitea via Helm installiert - Filestore-Mount-Problem gelöst
    
    Gitea-Konfiguration (`gitea-values.yaml`) erstellt, mit Verbindung zu PostgreSQL und TLS via cert-manager. Beim ersten Deployment blieben die Pods tagelang bei `Init:0/3` hängen, mit dem Fehler `MountVolume.MountDevice failed: DeadlineExceeded`. Das war ein bekannter Bug im Filestore-CSI-Treiber – der Mount blockierte dauerhaft auf Node-Ebene, selbst ein Node-Replace half nicht. Gelöst habe ich es, indem ich statt eines neuen automatisch erstellten Volumes das bereits stabile Filestore-Volume aus Terraform manuell als PersistentVolume eingebunden habe.- 
@@ -94,6 +102,7 @@ CloudNativePG Operator via Helm installiert. PostgreSQL-Cluster mit 1 Primary + 
 
 ----
 <br>
+
 ### 11. Schritt: PVC-Konflikt und hängender Finalizer behoben
 
 Beim manuellen Einbinden des PersistentVolumes gab es gleich zwei Folgefehler: Helm wollte das PVC nicht übernehmen (fehlende Ownership-Labels), und die Grösse passte nicht zur Helm-Konfiguration. Nach der Korrektur blieb das PVC dann im Status `Terminating` stecken - das liess sich nur lösen, indem ich den Kubernetes-Finalizer manuell per Patch entfernt habe.
@@ -112,6 +121,7 @@ Beim manuellen Einbinden des PersistentVolumes gab es gleich zwei Folgefehler: H
 
 ----
 <br>
+
 ### 12. Schritt: DNS/Cloudflare-Konflikt gelöst & Gitea live getestet
 
 Der DNS-Eintrag bei Hostpoint war korrekt, trotzdem zeigte `nslookup` weiterhin Cloudflare-IPs statt meiner Load-Balancer-IP. 
