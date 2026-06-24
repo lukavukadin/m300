@@ -68,15 +68,18 @@ CloudNativePG Operator via Helm installiert. PostgreSQL-Cluster mit 1 Primary + 
 
 10. Schritt: Gitea via Helm installiert - Filestore-Mount-Problem gelöst
    
-   Gitea-Konfiguration (`gitea-values.yaml`) erstellt, mit Verbindung zu PostgreSQL und TLS via cert-manager. Beim ersten Deployment blieben die Pods tagelang bei `Init:0/3` hängen, mit dem Fehler `MountVolume.MountDevice failed: DeadlineExceeded`. Das war ein bekannter Bug im Filestore-CSI-Treiber – der Mount blockierte dauerhaft auf Node-Ebene, selbst ein Node-Replace half nicht. Gelöst habe ich es, indem ich statt eines neuen automatisch erstellten Volumes das bereits stabile Filestore-Volume aus Terraform manuell als PersistentVolume eingebunden habe.
+   Gitea-Konfiguration (`gitea-values.yaml`) erstellt, mit Verbindung zu PostgreSQL und TLS via cert-manager. Beim ersten Deployment blieben die Pods tagelang bei `Init:0/3` hängen, mit dem Fehler `MountVolume.MountDevice failed: DeadlineExceeded`. Das war ein bekannter Bug im Filestore-CSI-Treiber – der Mount blockierte dauerhaft auf Node-Ebene, selbst ein Node-Replace half nicht. Gelöst habe ich es, indem ich statt eines neuen automatisch erstellten Volumes das bereits stabile Filestore-Volume aus Terraform manuell als PersistentVolume eingebunden habe.- 
+   
+- Hier sieht man die Drei Gitea-Pods am fest hängen:
 
-- Hier sieht man die Drei Gitea-Pods am fest hängen:`
    <img src="Bilder/Gitea_Pods_(Init-Phase).png" width="370" />
 
    - Fehler beim Mounten
+
 <img src="Bilder/warning_Failedmount.png" width="750" />
 
 - Lösung: ~gitea-shared-storage erfolgreich gebunden (RWX, standard-rwx):
+
 <img src="Bilder/gitea_shared_bound.png" width="850" />
 
 ----
@@ -86,12 +89,15 @@ CloudNativePG Operator via Helm installiert. PostgreSQL-Cluster mit 1 Primary + 
 Beim manuellen Einbinden des PersistentVolumes gab es gleich zwei Folgefehler: Helm wollte das PVC nicht übernehmen (fehlende Ownership-Labels), und die Grösse passte nicht zur Helm-Konfiguration. Nach der Korrektur blieb das PVC dann im Status `Terminating` stecken - das liess sich nur lösen, indem ich den Kubernetes-Finalizer manuell per Patch entfernt habe.
 
 - PV/PVC manuell erstellt als Workaround:				
+
 <img src="Bilder/gitea_pv_apply.png" width="450" />
 
 - Helm-Konflikt mit dem manuellen PVC	
+
 <img src="Bilder/apply_failed_with_gitea_values.png" width="990" />
 
 - Lösung: Patch behebt den Konflikt, Volume wieder frei:	
+
 <img src="Bilder/patch_pvc.png" width="999" />
 
 ----
