@@ -207,20 +207,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0343650201cd6a37",
+  "active": "0be6b8c4a537aece",
   "lastOpenFiles": [
-    "erfolgreicher_failover_test.mp4",
+    "README.md",
     "erfolgreicher_failover_test.mp4",
     "docs/Umsetzung.md",
+    "Architektursdiagramm.md",
     "images/pod_erfolgreich_gestartet.png",
     "images/pod_gelöscht.png",
     "images/replicacount_3.png",
     "images/gitea_upgraden.png",
     "images/drei_gitea_pods_am_laufen.png",
-    "Architektursdiagramm.md",
     "docs/Tagesjournal.md",
     "docs/Projektkonzept.md",
-    "README.md",
     "files.md",
     "docs",
     "Pasted image 20260624134451.png",
@@ -236,7 +235,6 @@
     "files",
     "ideas/ideen.md",
     "images",
-    "Neuer Ordner",
     "Lernjournal.md",
     "Projektideen/ki_coach.md",
     "git.md"
