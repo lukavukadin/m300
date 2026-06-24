@@ -159,16 +159,16 @@ Grund: Ich habe vergessen das ich meine Domain zusätzlich über Cloudflare verw
 
 Nach dem Hochskalieren auf 3 Replicas habe ich einen Pod-Ausfall simuliert, um die Hochverfügbarkeit zu testen. Ich habe einen laufenden Gitea-Pod manuell gelöscht und parallel die Webseite im Browser mehrmals neu geladen. Kubernetes hat sofort einen Ersatz-Pod erstellt, die Webseite war zu keinem Zeitpunkt nicht erreichbar.
 
-- relicaCount auf 3 erhöht:
+- replicaCount auf 3 erhöht:
 <img src="/images/replicacount_3.png" width="400" />
 
-- mit helm den befehl gegeben 3 gitea pods zu erstellen:
+- Mit helm den befehl gegeben 3 gitea pods zu erstellen:
 <img src="/images/gitea_upgraden.png" width="700" />
 
-- erfolgreich 3 pods erstellt
+- Erfolgreich 3 pods erstellt
 <img src="/images/drei_gitea_pods_am_laufen.png" width="400" />
 
-- Den am längsten laufenden Pod `gitea-759f75554f-4vdwh` gelöscht:
+- Den Pod `gitea-759f75554f-4vdwh` gelöscht:
 <img src="/images/pod_gelöscht.png" width="500" />
 
 - Dann wurde ein neuer Pod `gitea-759f75554f-pg9vw` erstellt und gestartet:
@@ -177,8 +177,6 @@ Nach dem Hochskalieren auf 3 Replicas habe ich einen Pod-Ausfall simuliert, um d
 Hier sieht man den Test Live:
 
 <img src="/images/erfolgreicher_failover_test.gif" alt="Failover Test" width="100%">
-
-
 
 ---
 
