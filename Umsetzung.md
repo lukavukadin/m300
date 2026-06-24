@@ -102,5 +102,23 @@ Beim manuellen Einbinden des PersistentVolumes gab es gleich zwei Folgefehler: H
 
 ----
 
-12. Schritt: Datenbank-Passwort-Mismatch behoben
+12. Schritt: DNS/Cloudflare-Konflikt gelöst & Gitea live getestet
 
+Der DNS-Eintrag bei Hostpoint war korrekt, trotzdem zeigte `nslookup` weiterhin Cloudflare-IPs statt meiner Load-Balancer-IP. 
+
+Grund: Ich habe vergessen das ich meine Domain zusätzlich über Cloudflare verwalte, das die Hostpoint-Einträge überschreibt. Lösung: A-Record direkt in Cloudflare erstellt. Danach war Gitea unter `https://git.lukavukadin.ch` mit gültigem HTTPS erreichbar, Admin-Login funktionierte.
+
+- A-Record in Cloudflare erstellt:
+
+<img src="cloudflare_record.png" width="400" />
+
+
+- Gitea unter `git.lukavukadin.ch` erreichbar:
+
+<img src="Bilder/git_erreichbar_ueber_domain.png" width="900" />
+
+
+
+- Erfolgreich als Admin eingeloggt:
+
+<img src="Bilder/erfolgreich_eingeloggt.png" width="900" />

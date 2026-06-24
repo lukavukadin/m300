@@ -192,12 +192,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0343650201cd6a37",
+  "active": "ac7657ac84f79a4a",
   "lastOpenFiles": [
+    "Bilder/erfolgreich_eingeloggt.png",
+    "Umsetzung.md",
+    "Bilder/cloudflare_record.png",
+    "Bilder/git_erreichbar_ueber_domain.png",
     "Bilder/patch_pvc.png",
     "Tagesjournal.md",
     "Bilder/warning_Failedmount 1.png",
-    "Umsetzung.md",
     "Bilder/apply_failed_with_gitea_values.png",
     "Bilder/gitea_pv_apply.png",
     "Bilder/warning_Failedmount.png",
@@ -206,10 +209,6 @@
     "README.md",
     "Architektursdiagramm.md",
     "Bilder/planung_m300.jpg",
-    "Bilder/Gitea_Pods_(Init-Phase).png",
-    "Bilder/filestore.png",
-    "Bilder/gcloud_free_trial.png",
-    "Bilder/gke_cluster.png",
     "files.md",
     "files/main.tf",
     "files/gitea-values.yaml",
