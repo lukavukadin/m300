@@ -45,7 +45,7 @@
     - [K8s Example Repo Kebohn](https://github.com/kebohn/k8s_example), K8s Storage Dokumentation.
 
 ----
-##  04.06.2026 – Modulteiltag 3:  (Google Cloud & GKE Setup)
+##  04.06.2026 – Modulteiltag 3: Terraform - Infrastructure as Code
 
 - **Geplante Tagesziele:**
     - Terraform lokal installieren und GCP Provider konfigurieren.
@@ -66,7 +66,7 @@
     - Terraform Dokumentation, GCP Console, gcloud CLI, kubectl.
 
 ----
-##  11.06.2026 – Modulteiltag 4: Das Datenbank-Cluster
+##  11.06.2026 – Modulteiltag 4: Ingress, TLS & DNS
 
 - **Geplante Tagesziele:**
     
@@ -86,7 +86,7 @@
 	- Helm Dokumentation, cert-manager Dokumentation, Hostpoint DNS-Verwaltung
         
 ----
-## 18.06.2026 – Modulteiltag 5: Shared Storage & Gitea Frontend
+## 18.06.2026 – Modulteiltag 5: Storage, PostgreSQL & Gitea Deployment
 
 - **Geplante Tagesziele:**
     
@@ -110,7 +110,7 @@
     - CloudNativePG Dokumentation, Gitea Helm Chart, GCP Filestore Dokumentation, Cloudflare DNS-Verwaltung
 
 ----
-##  25.06.2026 – Modulteiltag 6: Ingress, Domain & SSL
+##  25.06.2026 – Hochverfügbarkeit, HPA & Tests
 
 - **Geplante Tagesziele:**
     - Gitea auf 3 Replicas skalieren
@@ -130,7 +130,7 @@
     - _O_
         
 ----
-##  02.07.2026 – Modulteiltag 7: Failover-Testing & Optimierung
+##  02.07.2026 – Modulteiltag 7: CI/CD Pipeline & Sicherheit
 
 - **Geplante Tagesziele:**
     
