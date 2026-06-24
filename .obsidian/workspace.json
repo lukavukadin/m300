@@ -22,6 +22,20 @@
             }
           },
           {
+            "id": "0be6b8c4a537aece",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Umsetzung.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Umsetzung"
+            }
+          },
+          {
             "id": "03b71804b33745d2",
             "type": "leaf",
             "state": {
@@ -31,7 +45,8 @@
               "title": "Neuer Tab"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -122,12 +137,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Tagesjournal.md",
+                "file": "Umsetzung.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Ausgehende Links von Tagesjournal öffnen"
+              "title": "Ausgehende Links von Umsetzung öffnen"
             }
           },
           {
@@ -192,10 +207,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ac7657ac84f79a4a",
+  "active": "0be6b8c4a537aece",
   "lastOpenFiles": [
-    "Umsetzung.md",
     "Tagesjournal.md",
+    "Umsetzung.md",
+    "Architektursdiagramm.md",
+    "Pasted image 20260624134451.png",
+    "Projekt-beschreibung.md",
     "README.md",
     "Bilder/erfolgreich_eingeloggt.png",
     "Bilder/cloudflare_record.png",
@@ -206,9 +224,6 @@
     "Bilder/gitea_pv_apply.png",
     "Bilder/warning_Failedmount.png",
     "Bilder/gitea_shared_bound.png",
-    "Projekt-beschreibung.md",
-    "Architektursdiagramm.md",
-    "Bilder/planung_m300.jpg",
     "files.md",
     "files/main.tf",
     "files/gitea-values.yaml",
