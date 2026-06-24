@@ -25,7 +25,7 @@ Als erstes habe ich ein [[Architektursdiagramm]] erstellt und konnte so nachdenk
 Drei Terraform-Files erstellt (`main.tf`, `variables.tf`, `outputs.tf`) die folgende Ressourcen definieren: VPC-Netzwerk, Subnetz mit sekundären IP-Bereichen für Pods/Services, GKE-Cluster, Node-Pool, Cloud DNS Zone, Filestore-Instanz.
 [Hier geht es zu den Files](/.files)
 
-<img src="images/vs_einblick.png" width="600" />
+<img src="/images/vs_einblick.png" width="600" />
 
 ----
 <br>
