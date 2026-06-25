@@ -57,7 +57,7 @@
     
     - GCP-Projekt erstellt, APIs aktiviert, Terraform-Files geschrieben (VPC, Subnetz, GKE-Cluster, DNS-Zone, Filestore). Cluster steht, alle 3 Nodes sind `Ready`. 
     
-	 - [Umsetzung](Umsetzung.md) Schritte 2 - 5
+	 - [Umsetzung](Umsetzung.md) Schritte 2-5
     
 - **Aufgetretene Probleme & Reflexion:**
     - APIs waren im falschen Projekt aktiviert, dann ein SSD-Quota-Limit gesprengt (gelöst durch zonalen statt regionalen Cluster), und ein Cluster liess sich wegen `deletion_protection` nicht löschen. Zusätzlich blockierte das Schulnetz die Verbindung zu Google – auf dem Hotspot lief's dann sofort.
@@ -77,7 +77,7 @@
 - **Erreichte Resultate:**
     - Nginx Ingress via Helm installiert (mit automatischem Load Balancer + öffentlicher IP), cert-manager + ClusterIssuer für Let's Encrypt eingerichtet, A-Record bei Hostpoint gesetzt.
     
-    - [Umsetzung](Umsetzung.md) Schritte 6–8
+    - [Umsetzung](Umsetzung.md) Schritte 6-8
     
 - **Aufgetretene Probleme & Reflexion:**
 	- Lief diesmal ohne grössere Probleme durch, da das Netzwerkproblem von letzer Woche schon gelöst war.
@@ -100,7 +100,7 @@
     
     - Gitea ist unter `https://git.lukavukadin.ch` erreichbar, mit gültigem HTTPS und funktionierendem Admin-Login. 
     
-    - [Umsetzung](Umsetzung.md) Schritte 9–13
+    - [Umsetzung](Umsetzung.md) Schritte 9-13
     
 - **Aufgetretene Probleme & Reflexion:**
 	- Das war eindeutig der härteste Teil und hat sich über Tage gezogen. Zuerst hat ein Bug im Filestore-Treiber den Mount blockiert, am Ende half nur das bestehende Filestore-Volume von Hand einzubinden. Kaum war das gelöst, gab es Probleme mit Helm und einem PVC, das sich nicht löschen liess. Zum Schluss hat mich die Domain nochmal ausgebremst, weil ich vergessen hatte, dass Cloudflare meine DNS-Einträge überschreibt.
@@ -120,6 +120,7 @@
 - **Erreichte Resultate:**
     
     - Auf 3 Replicas skaliert, beide Failover-Tests erfolgreich (Gitea-Pod und PostgreSQL-Primary), HPA eingerichtet und mit Last getestet.
+    - [Umsetzung](Umsetzung.md) Schritte 14-16
     
 - **Aufgetretene Probleme & Reflexion:**
     
