@@ -222,12 +222,28 @@ Anschliessend habe ich den Datenbank-Failover getestet. Ich habe geprüft, welch
 
 HPA eingerichtet, der Gitea zwischen 3 und 6 Pods skaliert, abhängig von der CPU-Auslastung (Ziel: 70%). Dafür mussten erst Resource-Requests/Limits ergänzt werden, da diese fehlten.
 
-Zum Testen habe ich mit `busybox`-Pods künstliche Last erzeugt. Mit ca. 60 parallelen Lasttest-Pods stieg die CPU bis auf 70%, blieb aber knapp unter der Schwelle – Kubernetes skaliert erst bei klarer Überschreitung, um Flackern zu vermeiden. Mit 200 Lasttest-Pods kam dann nicht mehr Gitea, sondern der ganze Cluster an seine Grenze: Ein PostgreSQL-Pod konnte seine Health-Checks kurz nicht mehr beantworten und wurde automatisch neu gestartet. Nach dem Test hat sich alles innerhalb wenigen Minuten von selbst erholt, ohne Datenverlust.
+Zum Testen habe ich mit `busybox`-Pods künstliche Last erzeugt. Mit ca. 60 parallelen Lasttest-Pods stieg die CPU bis auf 70%, blieb aber knapp unter der Schwelle - Kubernetes skaliert erst bei klarer Überschreitung, um Flackern zu vermeiden. Mit 200 Lasttest-Pods kam dann nicht mehr Gitea, sondern der ganze Cluster an seine Grenze: Ein PostgreSQL-Pod konnte seine Health-Checks kurz nicht mehr beantworten und wurde automatisch neu gestartet. Nach dem Test hat sich alles innerhalb wenigen Minuten von selbst erholt, ohne Datenverlust.
 
-- Als ich den befehl `kubectl get hpa` durchgeführt habe 
+- Als ich den befehl `kubectl get hpa` durchgeführt habe kam als cpu unknown:
 
 ```
 C:\Users\vukadinl\m300-gitea> kubectl get hpa
 NAME  REFERENCE TARGETS MINPODS MAXPODS REPLICAS AGE 
 gitea Deployment/gitea cpu: <unknown>/70% 3 6 3 97s
 ```
+
+
+- Deswegen habe ich Resource-Requests/Limits ergänzt, damit HPA überhaupt messen kann:
+
+<img src="/images/gitea_values.png" width="300" />
+
+- Nach der Anpassung liefert der HPA jetzt echte CPU-Werte:
+
+<img src="/images/hpa.png" width="550" />
+
+
+- Hier sieht man den CPU-Verlauf während des Lasttests:
+
+<img src="/images/cpu_steigt.png" width="550" />
+
+----

@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Umsetzung.md",
+                "file": "docs/Tagesjournal.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Umsetzung"
+              "title": "Tagesjournal"
             }
           },
           {
@@ -137,12 +137,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/Umsetzung.md",
+                "file": "docs/Tagesjournal.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Ausgehende Links von Umsetzung öffnen"
+              "title": "Ausgehende Links von Tagesjournal öffnen"
             }
           },
           {
@@ -209,22 +209,22 @@
   },
   "active": "0be6b8c4a537aece",
   "lastOpenFiles": [
-    "docs/Projektkonzept.md",
-    "docs/Tagesjournal.md",
     "docs/Umsetzung.md",
+    "README.md",
+    "Architektursdiagramm.md",
+    "images/cpu_steigt.png",
+    "docs/Tagesjournal.md",
+    "docs/Projektkonzept.md",
+    "images/gitea_values.png",
+    "images/hpa.png",
     "images/erfolgreicher_postgres_failover.gif",
     "erfolgreicher_failover_test2.gif",
     "images/erfolgreicher_postgres_failover.png",
     "images/postgres_primary_wechsel.png",
-    "README.md",
-    "Architektursdiagramm.md",
     "images/primary_gelöscht.png",
     "images/gitea_postgres_primary.png",
     "images/erfolgreicher_failover_test.gif",
     "erfolgreicher_failover_test.mp4",
-    "images/pod_erfolgreich_gestartet.png",
-    "images/pod_gelöscht.png",
-    "images/replicacount_3.png",
     "files.md",
     "docs",
     "files/main.tf",

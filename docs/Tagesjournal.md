@@ -119,16 +119,17 @@
     
 - **Erreichte Resultate:**
     
-    - _O_
-        
+    - Auf 3 Replicas skaliert, beide Failover-Tests erfolgreich (Gitea-Pod und PostgreSQL-Primary), HPA eingerichtet und mit Last getestet.
+    
 - **Aufgetretene Probleme & Reflexion:**
     
-    - _O_
-        
-- **Eingesetzte Ressourcen:**
+    - HPA brauchte erst Resource-Requests, um überhaupt zu messen. Bei starker Last kam nicht Gitea, sondern der ganze Cluster an seine Grenze – ein Postgres-Pod wurde kurz unhealthy, erholte sich aber selbst.
     
-    - _O_
-        
+- **Eingesetzte Ressourcen:**
+    - Kubernetes HPA Dokumentation
+	- kubectl CLI
+	- CloudNativePG Dokumentation
+	
 ----
 ##  02.07.2026 – Modulteiltag 7: CI/CD Pipeline & Sicherheit
 
