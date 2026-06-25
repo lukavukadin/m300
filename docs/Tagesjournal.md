@@ -69,7 +69,6 @@
 ##  11.06.2026 – Modulteiltag 4: Ingress, TLS & DNS
 
 - **Geplante Tagesziele:**
-    
     - Nginx Ingress installieren
     - cert-manager mit Let's Encrypt einrichten
     - DNS-Eintrag erstellen.
@@ -89,13 +88,11 @@
 ## 18.06.2026 – Modulteiltag 5: Storage, PostgreSQL & Gitea Deployment
 
 - **Geplante Tagesziele:**
-    
     - Filestore als Shared Storage einbinden
     - PostgreSQL-Cluster deployen
     - Gitea installieren und über die Domain testen.
 
 - **Erreichte Resultate:**
-    
     - Filestore-CSI-Driver aktiviert, PostgreSQL-Cluster (1 Primary + 2 Replicas) läuft, Gitea erfolgreich deployt. 
     
     - Gitea ist unter `https://git.lukavukadin.ch` erreichbar, mit gültigem HTTPS und funktionierendem Admin-Login. 
@@ -118,12 +115,10 @@
     - Failover-Tests (Pod- und DB-Ausfall) durchführen.
     
 - **Erreichte Resultate:**
-    
     - Auf 3 Replicas skaliert, beide Failover-Tests erfolgreich (Gitea-Pod und PostgreSQL-Primary), HPA eingerichtet und mit Last getestet.
     - [Umsetzung](Umsetzung.md) Schritte 14-16
     
 - **Aufgetretene Probleme & Reflexion:**
-    
     - HPA brauchte erst Resource-Requests, um überhaupt zu messen. Bei starker Last kam nicht Gitea, sondern der ganze Cluster an seine Grenze – ein Postgres-Pod wurde kurz unhealthy, erholte sich aber selbst.
     
 - **Eingesetzte Ressourcen:**
@@ -135,7 +130,6 @@
 ##  02.07.2026 – Modulteiltag 7: CI/CD Pipeline & Sicherheit
 
 - **Geplante Tagesziele:**
-    
     - GitHub Actions Pipeline für automatisches Deployment einrichten
     - Rolling Update testen.
     
