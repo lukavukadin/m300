@@ -130,21 +130,22 @@
 ##  02.07.2026 – Modulteiltag 7: CI/CD Pipeline & Sicherheit
 
 - **Geplante Tagesziele:**
-    - GitHub Actions Pipeline für automatisches Deployment einrichten
-    - Rolling Update testen.
+    - Monitoring einrichten und Alerting konfigurieren.
+	- GitHub Actions Pipeline für automatisches Deployment einrichten (CI/CD).
     
 - **Erreichte Resultate:**
+    - GCP Monitoring Dashboard eingerichtet und zwei Alert-Richtlinien konfiguriert
+    - [Umsetzung](Umsetzung.md) Schritte 17
     
-    - _O_
-        
+	- CI/CD mit GitHub Actions konnte ich noch nicht machen, mache ich aber übers Wochenende
+	
 - **Aufgetretene Probleme & Reflexion:**
-    
-    - _O_
+	    -
         
 - **Eingesetzte Ressourcen:**
+    - GCP Monitoring Console
+	- kubectl CLI
     
-    - _O_
-        
 -----
 ##  09.07.2026 – Modulteiltag 8: Abgabe & Finalisierung
 

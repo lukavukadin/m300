@@ -201,6 +201,8 @@
   "lastOpenFiles": [
     "docs/Tagesjournal.md",
     "docs/Umsetzung.md",
+    "images/gcloud_übersicht_alert.png",
+    "images/alert_email_benachrichtigung.png",
     "images/alert_pod_löschen.png",
     "pod_gelöscht.png",
     "images/überblick_monitoring_richtlinien.png",
@@ -213,8 +215,6 @@
     "images/erfolgreicher_failover_test.gif",
     "ideas/ideen.md",
     "images/cpu_steigt.png",
-    "images/gitea_values.png",
-    "images/hpa.png",
     "erfolgreicher_failover_test.mp4",
     "files.md",
     "docs",

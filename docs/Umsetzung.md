@@ -281,9 +281,24 @@ Um den Crash Alert zu testen, habe ich mit `kubectl exec` den Hauptprozess eines
 <img src="/images/überblick_monitoring_richtlinien.png" width="850" />
 
 
-**Alter-Test:
+**Alert-Test:
 
-Zuerst habe ich mit `kubectl exec` den Hauptprozess eines Gitea-Pods manuell beendet:
+- Zuerst habe ich mit `kubectl exec` den Hauptprozess eines Gitea-Pods manuell beendet
+
+Kubernetes hat den Pod sofort automatisch neugestartet. GCP hat den Anstieg des Restart Counts erkannt und direkt eine E-Mail ausgelöst:
 
 <img src="/images/alert_pod_löschen.png" width="850" />
+
+
+
+- Automatische E-Mail von GCP: "Alert firing - Kubernetes Container Restart count is above threshold of 0"
+
+<img src="/images/alert_email_benachrichtigung.png" width="650" />
+
+
+- GCP Monitoring zeigt den Vorfall live mit dem Restart-Count-Anstieg:
+
+<img src="/images/gcloud_übersicht_alert.png" width="950" />
+
+---
 
