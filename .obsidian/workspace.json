@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Umsetzung.md",
+                "file": "docs/Tagesjournal.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Umsetzung"
+              "title": "Tagesjournal"
             }
           }
         ],
@@ -127,12 +127,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/Umsetzung.md",
+                "file": "docs/Tagesjournal.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Ausgehende Links von Umsetzung öffnen"
+              "title": "Ausgehende Links von Tagesjournal öffnen"
             }
           },
           {
@@ -199,8 +199,8 @@
   },
   "active": "0be6b8c4a537aece",
   "lastOpenFiles": [
-    "docs/Tagesjournal.md",
     "docs/Umsetzung.md",
+    "docs/Tagesjournal.md",
     "images/gcloud_übersicht_alert.png",
     "images/alert_email_benachrichtigung.png",
     "images/alert_pod_löschen.png",

@@ -140,8 +140,8 @@
 	- CI/CD mit GitHub Actions konnte ich noch nicht machen, mache ich aber übers Wochenende
 	
 - **Aufgetretene Probleme & Reflexion:**
-	    -
-        
+    - _O_
+
 - **Eingesetzte Ressourcen:**
     - GCP Monitoring Console
 	- kubectl CLI
