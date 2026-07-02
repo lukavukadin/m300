@@ -1,4 +1,4 @@
-# M300 – Cloud & Kubernetes (BiVo2021)
+# M300 – Cloud & Kubernetes
 
 Kurze Übersicht zum Modul "Plattformübergreifende Dienste in ein Netzwerk integrieren" für Plattformentwickler.
 
@@ -23,7 +23,8 @@ Kurze Übersicht zum Modul "Plattformübergreifende Dienste in ein Netzwerk inte
 
 ### Ordnerstruktur
 
-- /2_Unterrichtsressourcen – Übungen und Aufträge.
-- /3_Umsetzung – Modulablauf und Planung.
-- /projects – Die Projektarbeiten.
-- Kompetenzmatrix.md – Genaue Lernziele.
+- /docs/[Tagesjournal](Tagesjournal.md) - 
+- /[Umsetzung](Umsetzung.md) - schritt für schritt Ausführung
+- /images - Beweis während der Umsetzung
+- /[Architektursdiagramm](Architektursdiagramm.md) - Projekt bildlich vorstellbar
+- /[ideen](ideen.md) - Projektideen

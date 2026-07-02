@@ -247,4 +247,9 @@ gitea Deployment/gitea cpu: <unknown>/70% 3 6 3 97s
 <img src="/images/cpu_steigt.png" width="550" />
 
 ----
+<br>
+
+### Schritt 17: Monitoring & Alerting eingerichtet
+
+GCP Monitoring ist für GKE automatisch aktiv. Über das **GKE Cluster Monitoring Dashboard** lassen sich CPU, Memory, Netzwerk und Pod-Status in Echtzeit beobachten. Zusätzlich habe ich einen Alert eingerichtet, der mich per E-Mail benachrichtigt, sobald ein Container neu startet und so werde ich automatisch auf Probleme aufmerksam, ohne manuell nachschauen zu müssen.
 
