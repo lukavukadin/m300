@@ -4,7 +4,7 @@
 
 ### 1. Schritt: Architektursdiagramm:
 
-Als erstes habe ich ein [[Architektursdiagramm]] erstellt und konnte so nachdenken und überlegen wie ich mein Projekt aufgebaut werden soll
+Als erstes habe ich ein [Architektursdiagramm](Architektursdiagramm.md) erstellt und konnte so nachdenken und überlegen wie ich mein Projekt aufgebaut werden soll
 
 <img src="/images/planung_m300.jpg" width="600" />
 
@@ -251,5 +251,39 @@ gitea Deployment/gitea cpu: <unknown>/70% 3 6 3 97s
 
 ### Schritt 17: Monitoring & Alerting eingerichtet
 
-GCP Monitoring ist für GKE automatisch aktiv. Über das **GKE Cluster Monitoring Dashboard** lassen sich CPU, Memory, Netzwerk und Pod-Status in Echtzeit beobachten. Zusätzlich habe ich einen Alert eingerichtet, der mich per E-Mail benachrichtigt, sobald ein Container neu startet und so werde ich automatisch auf Probleme aufmerksam, ohne manuell nachschauen zu müssen.
+GCP Monitoring sammelt automatisch Metriken vom GKE-Cluster. Über das GKE Cluster Monitoring Dashboard lassen sich CPU, Memory, Netzwerk und Pod-Status in Echtzeit beobachten.
+
+
+Zusätzlich habe ich zwei Benachrichtigungsrichtlinien eingerichtet, die mich per E-Mail warnen:
+
+- Gitea Pod Crash Alert - feuert wenn ein Container neu startet (Restart Count > 0), z.B. bei CrashLoopBackOff
+
+- Gitea Pod Down Alert - feuert wenn ein Container länger als 5 Minuten keine Metriken mehr sendet. Die 5-Minuten-Schwelle habe ich gewählt, weil Kubernetes bei einem Ausfall innerhalb von Sekunden automatisch einen Ersatz Pod startet - ein kurzfristiger Neustart löst also keinen unnötigen Alarm aus.
+
+Um den Crash Alert zu testen, habe ich mit `kubectl exec` den Hauptprozess eines Gitea-Pods manuell gekilled. Der Pod wurde sofort automatisch neugestartet, und kurz danach kam die E-Mail-Benachrichtigung.
+
+
+**Richtlinie erstellt:
+
+- Messwert `Restart count` ausgewählt für den Crash Alert:
+
+<img src="/images/messwert_restart_countt.png" width="750" />
+
+
+
+- E-Mail als Benachrichtigungskanal eingetragen:
+
+<img src="/images/übersicht_benachrichtigung.png" width="850" />
+
+
+- Beide Alerts erstellt und sind aktiv in der Übersicht:
+
+<img src="/images/überblick_monitoring_richtlinien.png" width="850" />
+
+
+**Alter-Test:
+
+Zuerst habe ich mit `kubectl exec` den Hauptprozess eines Gitea-Pods manuell beendet:
+
+<img src="/images/alert_pod_löschen.png" width="850" />
 

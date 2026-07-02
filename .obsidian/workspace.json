@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "docs/Umsetzung.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Umsetzung"
             }
           }
         ],
@@ -127,12 +127,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "docs/Umsetzung.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Ausgehende Links von README öffnen"
+              "title": "Ausgehende Links von Umsetzung öffnen"
             }
           },
           {
@@ -199,22 +199,22 @@
   },
   "active": "0be6b8c4a537aece",
   "lastOpenFiles": [
-    "docs/Umsetzung.md",
     "docs/Tagesjournal.md",
+    "docs/Umsetzung.md",
+    "images/alert_pod_löschen.png",
+    "pod_gelöscht.png",
+    "images/überblick_monitoring_richtlinien.png",
     "README.md",
     "Architektursdiagramm.md",
-    "ideas/ideen.md",
+    "images/übersicht_benachrichtigung.png",
+    "images/messwert_restart_countt.png",
     "docs/Projektkonzept.md",
+    "images/erfolgreicher_postgres_failover.gif",
+    "images/erfolgreicher_failover_test.gif",
+    "ideas/ideen.md",
     "images/cpu_steigt.png",
     "images/gitea_values.png",
     "images/hpa.png",
-    "images/erfolgreicher_postgres_failover.gif",
-    "erfolgreicher_failover_test2.gif",
-    "images/erfolgreicher_postgres_failover.png",
-    "images/postgres_primary_wechsel.png",
-    "images/primary_gelöscht.png",
-    "images/gitea_postgres_primary.png",
-    "images/erfolgreicher_failover_test.gif",
     "erfolgreicher_failover_test.mp4",
     "files.md",
     "docs",
