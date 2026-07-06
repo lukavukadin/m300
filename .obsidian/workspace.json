@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ideas/ideen.md",
+                "file": "docs/Testkonzept.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ideen"
+              "title": "Testkonzept"
             }
           }
         ],
@@ -127,12 +127,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ideas/ideen.md",
+                "file": "docs/Testkonzept.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Ausgehende Links von ideen öffnen"
+              "title": "Ausgehende Links von Testkonzept öffnen"
             }
           },
           {
@@ -198,8 +198,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0343650201cd6a37",
+  "active": "0be6b8c4a537aece",
   "lastOpenFiles": [
+    "ideas/ideen.md",
+    "docs/Testkonzept.md",
     "docs/Technologieentscheid.md",
     "docs/Umsetzung.md",
     "images/gcp_kosten.png",
@@ -216,7 +218,6 @@
     "images/alert_email_benachrichtigung.png",
     "images/alert_pod_löschen.png",
     "docs/Projektkonzept.md",
-    "ideas/ideen.md",
     "erfolgreicher_failover_test.mp4",
     "files.md",
     "docs",

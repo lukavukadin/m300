@@ -2,7 +2,7 @@
 
 ### Self-hosted AI Chatbot
 
-Ich deploye Ollama in Kubernetes - ein open-source Tool das lokale KI-Modelle laufen lässt. Mit einer simplen Chat-UI drauf hab ich ein Endprodukt das jeder sofort versteht und das mega aktuell ist.
+Ich deploye Ollama in Kubernetes -P ein open-source Tool das lokale KI-Modelle laufen lässt. Mit einer simplen Chat-UI drauf hab ich ein Endprodukt das jeder sofort versteht und das mega aktuell ist.
 
 ----
 
