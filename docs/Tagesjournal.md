@@ -116,7 +116,8 @@
     
 - **Erreichte Resultate:**
     - Auf 3 Replicas skaliert, beide Failover-Tests erfolgreich (Gitea-Pod und PostgreSQL-Primary), HPA eingerichtet und mit Last getestet.
-    - [Umsetzung](Umsetzung.md) Schritte 14-16
+    
+	- [Umsetzung](Umsetzung.md) Schritte 14-16
     
 - **Aufgetretene Probleme & Reflexion:**
     - HPA brauchte erst Resource-Requests, um überhaupt zu messen. Bei starker Last kam nicht Gitea, sondern der ganze Cluster an seine Grenze – ein Postgres-Pod wurde kurz unhealthy, erholte sich aber selbst.
@@ -134,16 +135,17 @@
 	- GitHub Actions Pipeline für automatisches Deployment einrichten (CI/CD).
     
 - **Erreichte Resultate:**
-    - GCP Monitoring Dashboard eingerichtet und zwei Alert-Richtlinien konfiguriert
-    - [Umsetzung](Umsetzung.md) Schritte 17
+    - Zwei Alert-Richtlinien eingerichtet und getestet (E-Mail kam automatisch). GitHub Actions Workflow erstellt - bei jedem Push deployt er Gitea automatisch auf GKE. Passwörter durch GitHub Secrets ersetzt.
     
-	- CI/CD mit GitHub Actions konnte ich noch nicht machen, mache ich aber übers Wochenende
-	
+	- [Umsetzung](Umsetzung.md) Schritte 17 - 18
+    
+
 - **Aufgetretene Probleme & Reflexion:**
-    - _O_
+    - Service Account Key war durch GCP-Richtlinie verboten - deshalb Workload Identity Federation eingerichtet. Passwörter wurden beim ersten Push versehentlich mitgepusht und sofort wieder entfernt.
 
 - **Eingesetzte Ressourcen:**
     - GCP Monitoring Console
+	- GitHub Actions Dokumentation
 	- kubectl CLI
     
 -----

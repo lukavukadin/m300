@@ -301,4 +301,43 @@ Kubernetes hat den Pod sofort automatisch neugestartet. GCP hat den Anstieg des 
 <img src="/images/gcloud_übersicht_alert.png" width="950" />
 
 ---
+<br>
 
+### Schritt 18: CI/CD mit GitHub Actions eingerichtet
+
+Das Projekt-Repository wurde auf GitHub erstellt (lukavukadin/m300-gitea, privat). Bei jedem Push auf main deployt GitHub Actions automatisch Gitea auf den GKE-Cluster.
+
+
+- Erster Fehler - Service Account Key nicht erlaubt:
+
+Weil GCP die Erstellung von Service Account Keys blockiert hat, musste ich stattdessen Workload Identity Federation einrichten - die modernere und sicherere Methode ohne Key-File.
+
+<img src="/images/service_key_error.png" width="950" />
+
+
+
+- Workload Identity Pool und Provider erstellt:
+
+Workload Identity Pool und Provider erfolgreich erstellt, Service Account verknüpft. GitHub Actions kann sich damit ohne Key direkt bei GCP authentifizieren.
+
+<img src="/images/workload_identity_setup.png" width="950" />
+
+
+- Versehentlich gepushter Key - sofort behoben:
+
+<img src="/images/git_rm_key.png" width="550" />
+
+
+- GitHub Actions läuft automatisch bei jedem Push:
+
+<img src="/images/github_actions_uebersicht.png" width="980" />
+
+
+- Alle Schritte erfolgreich durchgelaufen:
+
+<img src="/images/github_actions_detail.png" width="980" />
+
+----
+<br>
+
+### Schritt 19: 
