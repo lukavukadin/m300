@@ -315,12 +315,58 @@ Weil GCP die Erstellung von Service Account Keys blockiert hat, musste ich statt
 <img src="/images/service_key_error.png" width="950" />
 
 
-
 - Workload Identity Pool und Provider erstellt:
 
 Workload Identity Pool und Provider erfolgreich erstellt, Service Account verknüpft. GitHub Actions kann sich damit ohne Key direkt bei GCP authentifizieren.
 
 <img src="/images/workload_identity_setup.png" width="950" />
+
+
+- Workflow-File erstellt:
+
+Der Workflow `.github/workflows/deploy.yml` definiert die CI/CD-Pipeline - er wird bei jedem Push auf `main` automatisch ausgelöst und führt GCP-Login, kubectl-Konfiguration, Helm-Installation und Gitea-Deployment aus.
+
+```
+name: Deploy Gitea to GKE
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Code holen
+        uses: actions/checkout@v3
+
+      - name: Bei GCP einloggen (Workload Identity)
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: "projects/317129508741/locations/global/workloadIdentityPools/github-pool/providers/github-provider"
+          service_account: "github-actions@m300-gitea.iam.gserviceaccount.com"
+
+      - name: kubectl konfigurieren
+        uses: google-github-actions/get-gke-credentials@v2
+        with:
+          cluster_name: gitea-cluster
+          location: europe-west1-b
+          project_id: m300-gitea
+
+      - name: Helm installieren
+        uses: azure/setup-helm@v3
+
+      - name: Gitea deployen
+        run: |
+          helm repo add gitea-charts https://dl.gitea.com/charts/
+          helm repo update
+          helm upgrade gitea gitea-charts/gitea -f kubernetes/gitea-values.yaml --namespace default --wait
+```
 
 
 - Versehentlich gepushter Key - sofort behoben:
@@ -340,4 +386,24 @@ Workload Identity Pool und Provider erfolgreich erstellt, Service Account verkn�
 ----
 <br>
 
-### Schritt 19: 
+### Schritt 19: Secrets-Management – Passwörter aus Code entfernt
+
+Nachdem das Repository auf GitHub gepusht wurde, waren die Passwörter in gitea-values.yaml und postgres-cluster.yaml noch im Klartext sichtbar. Da das Repo privat ist, war das kein unmittelbares Sicherheitsproblem, aber trotzdem schlechte Praxis.
+
+**Lösung:** Passwörter durch PLACEHOLDER ersetzt und die echten Werte als GitHub Secrets gespeichert. Der GitHub Actions Workflow übergibt die Secrets beim Deployment via --set an Helm - so sind sie nie im Code sichtbar.
+
+- Drei Secrets erfolgreich erstellt:
+
+<img src="/images/github_secrets.png" width="980" />
+
+
+- Hier sieht man als beispiel einen Placeholder in diesem File:
+
+<img src="/images/placeholder.png" width="350" />
+
+
+- deploy.yml angepasst:
+
+<img src="/images/deploy_angepasst.png" width="550" />
+
+
