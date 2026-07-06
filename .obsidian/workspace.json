@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Tagesjournal.md",
+                "file": "docs/Technologieentscheid.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tagesjournal"
+              "title": "Technologieentscheid"
             }
           }
         ],
@@ -127,12 +127,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/Tagesjournal.md",
+                "file": "docs/Technologieentscheid.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Ausgehende Links von Tagesjournal öffnen"
+              "title": "Ausgehende Links von Technologieentscheid öffnen"
             }
           },
           {
@@ -201,6 +201,8 @@
   "active": "0be6b8c4a537aece",
   "lastOpenFiles": [
     "docs/Umsetzung.md",
+    "docs/Technologieentscheid.md",
+    "images/gcp_kosten.png",
     "docs/Tagesjournal.md",
     "README.md",
     "images/github_actions_detail.png",
@@ -213,7 +215,6 @@
     "images/gcloud_übersicht_alert.png",
     "images/alert_email_benachrichtigung.png",
     "images/alert_pod_löschen.png",
-    "pod_gelöscht.png",
     "docs/Projektkonzept.md",
     "ideas/ideen.md",
     "erfolgreicher_failover_test.mp4",
