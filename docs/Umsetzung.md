@@ -277,7 +277,7 @@ Zusätzlich habe ich zwei Benachrichtigungsrichtlinien eingerichtet, die mich pe
 Um den Crash Alert zu testen, habe ich mit `kubectl exec` den Hauptprozess eines Gitea-Pods manuell gekilled. Der Pod wurde sofort automatisch neugestartet, und kurz danach kam die E-Mail-Benachrichtigung.
 
 
-**Richtlinie erstellt**
+**Richtlinie erstellt:**
 
 - Messwert `Restart count` ausgewählt für den Crash Alert:
 
@@ -294,7 +294,7 @@ Um den Crash Alert zu testen, habe ich mit `kubectl exec` den Hauptprozess eines
 <img src="/images/überblick_monitoring_richtlinien.png" width="850" />
 <br>
 
-**Alert-Test**
+**Alert-Test:**
 
 - Zuerst habe ich mit `kubectl exec` den Hauptprozess eines Gitea-Pods manuell beendet
 
