@@ -142,7 +142,6 @@ Grund: Ich habe vergessen das ich meine Domain zusätzlich über Cloudflare verw
 - A-Record in Cloudflare erstellt:
 
 <img src="/images/cloudflare_record.png" width="400" />
-
 <br>
 
 - Gitea unter `git.lukavukadin.ch` erreichbar:
