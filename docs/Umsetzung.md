@@ -23,7 +23,8 @@ Als erstes habe ich ein [Architektursdiagramm](../Architektursdiagramm.md) erste
 ### 3. Schritt: Terraform-Infrastruktur geschrieben:
 
 Drei Terraform-Files erstellt (`main.tf`, `variables.tf`, `outputs.tf`) die folgende Ressourcen definieren: VPC-Netzwerk, Subnetz mit sekundären IP-Bereichen für Pods/Services, GKE-Cluster, Node-Pool, Cloud DNS Zone, Filestore-Instanz.
-[Hier geht es zu den Files](/.files)
+
+- Die Files sind im anderen REPO: https://github.com/lukavukadin/m300-gitea
 
 <img src="/images/vs_einblick.png" width="600" />
 
