@@ -143,12 +143,13 @@ Grund: Ich habe vergessen das ich meine Domain zusätzlich über Cloudflare verw
 
 <img src="/images/cloudflare_record.png" width="400" />
 
-
+<br>
 - Gitea unter `git.lukavukadin.ch` erreichbar:
 
 <img src="/images/git_erreichbar_ueber_domain.png" width="900" />
 
 
+<br>
 
 - Erfolgreich als Admin eingeloggt:
 
