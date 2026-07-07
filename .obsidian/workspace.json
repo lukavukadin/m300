@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Projektreflexion.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Projektreflexion"
+              "title": "README"
             }
           }
         ],
@@ -127,12 +127,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/Projektreflexion.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Ausgehende Links von Projektreflexion öffnen"
+              "title": "Ausgehende Links von README öffnen"
             }
           },
           {
@@ -198,10 +198,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0343650201cd6a37",
+  "active": "0be6b8c4a537aece",
   "lastOpenFiles": [
-    "docs/Umsetzung.md",
     "docs/Projektreflexion.md",
+    "docs/Umsetzung.md",
     "images/deploy_angepasst.png",
     "images/placeholder.png",
     "images/github_secrets.png",

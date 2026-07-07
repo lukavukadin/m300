@@ -1,30 +1,37 @@
-# M300 – Cloud & Kubernetes
+# M300 – Hochverfügbares Gitea auf GCP mit Kubernetes
+Schulprojekt Modul 300 – Luka Vukadin
 
-Kurze Übersicht zum Modul "Plattformübergreifende Dienste in ein Netzwerk integrieren" für Plattformentwickler.
+---
+## Projektübersicht
+- **Projektvariante:** V2 - Eigenes Projekt mit neuen Technologien
+- **Applikation:** Gitea (selbst-gehosteter Git-Service)
+- **Cloud:** Google Cloud Platform (GCP) - Google Kubernetes Engine (GKE)
+- **Domain:** https://git.lukavukadin.ch
+- **Projekt-Repository (Infrastruktur & Config):** https://github.com/lukavukadin/m300-gitea
 
--------
+---
+## Eingesetzte Technologien
+- **Terraform** - Infrastruktur als Code (VPC, GKE, DNS, Filestore)
+- **Kubernetes** - Container-Orchestrierung (Ingress, TLS, HPA, Failover)
+- **CloudNativePG** - PostgreSQL-Cluster (1 Primary + 2 Replicas)
+- **GitHub Actions** - CI/CD Pipeline (automatisches Deployment)
+- **GCP Monitoring** - Alerting bei Pod-Ausfall
 
-### Das Wichtigste in Kürze
+---
+## Dokumentation
 
-- Thema: Container-Technologien, Kubernetes-Orchestrierung und CI/CD im CNCF-Ökosystem (AWS, Azure, GCP).
-- Umfang: 40h Präsenz + ca. 25h Selbststudium.
-- Voraussetzung: Linux-Basics, Cloud-Grundlagen sowie die Module 169 und 346.
-- Leistungsnachweis: Bewertung von 2 Projektarbeiten.
+### docs/
+- `Tagesjournal.md` - Wöchentliches Lernjournal (21.05.–09.07.2026)
+- `Umsetzung.md` - Schritt-für-Schritt Ausführung mit Screenshots (19 Schritte)
+- `Technologieentscheid.md` - Begründung der gewählten Technologien und Kosten
+- `Testkonzept.md` - Durchgeführte Tests (Failover, HPA, Monitoring, CI/CD)
+- `Rollenkonzept.md` - Service Accounts und Berechtigungen (Least Privilege)
+- `Projektreflexion.md` - Abschliessende Reflexion und Selbsteinschätzung
 
------
+---
+### Architektursdiagramm.md
+- Visualisierung der Gesamtarchitektur
 
-### Kerninhalte
- 
-- A/B: Container-Standards, Images & Registries.
-- C/D: Microservices-Architektur & Kubernetes.
-- E: Continuous Integration & Delivery (CI/CD).
-
-------
-
-### Ordnerstruktur
-
-- /docs/[Tagesjournal](Tagesjournal.md) - 
-- /[Umsetzung](Umsetzung.md) - schritt für schritt Ausführung
-- /images - Beweis während der Umsetzung
-- /[Architektursdiagramm](Architektursdiagramm.md) - Projekt bildlich vorstellbar
-- /[Projektideen](Projektideen.md) - Projektideen
+---
+### images/
+- Screenshots und Beweise aus der Umsetzung.
