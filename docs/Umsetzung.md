@@ -102,10 +102,12 @@ CloudNativePG Operator via Helm installiert. PostgreSQL-Cluster mit 1 Primary + 
 - Hier sieht man die Drei Gitea-Pods am fest hängen:
 
    <img src="/images/Gitea_Pods_(Init-Phase).png" width="370" />
+<br>
 
 - Fehler beim Mounten
 
 <img src="/images/warning_Failedmount.png" width="750" />
+<br>
 
 - Lösung: ~gitea-shared-storage erfolgreich gebunden (RWX, standard-rwx):
 
@@ -121,10 +123,12 @@ Beim manuellen Einbinden des PersistentVolumes gab es gleich zwei Folgefehler: H
 - PV/PVC manuell erstellt als Workaround:				
 
 <img src="/images/gitea_pv_apply.png" width="450" />
+<br>
 
 - Helm-Konflikt mit dem manuellen PVC	
 
 <img src="/images/apply_failed_with_gitea_values.png" width="990" />
+<br>
 
 - Lösung: Patch behebt den Konflikt, Volume wieder frei:	
 
@@ -147,9 +151,8 @@ Grund: Ich habe vergessen das ich meine Domain zusätzlich über Cloudflare verw
 - Gitea unter `git.lukavukadin.ch` erreichbar:
 
 <img src="/images/git_erreichbar_ueber_domain.png" width="900" />
-
-
 <br>
+
 
 - Erfolgreich als Admin eingeloggt:
 
@@ -165,22 +168,27 @@ Nach dem Hochskalieren auf 3 Replicas habe ich einen Pod-Ausfall simuliert, um d
 - replicaCount auf 3 erhöht:
 
 <img src="/images/replicacount_3.png" width="400" />
+<br>
 
 - Mit helm den befehl gegeben 3 gitea pods zu erstellen:
 
 <img src="/images/gitea_upgraden.png" width="700" />
+<br>
 
 - Erfolgreich 3 pods erstellt
 
 <img src="/images/drei_gitea_pods_am_laufen.png" width="400" />
+<br>
 
 - Den Pod `gitea-759f75554f-4vdwh` gelöscht:
 
 <img src="/images/pod_gelöscht.png" width="500" />
+<br>
 
 - Dann wurde ein neuer Pod `gitea-759f75554f-pg9vw` erstellt und gestartet:
 
 <img src="/images/pod_erfolgreich_gestartet.png" width="500" />
+<br>
 
 - Hier sieht man den Test Live:
 
@@ -196,21 +204,24 @@ Anschliessend habe ich den Datenbank-Failover getestet. Ich habe geprüft, welch
 - `gitea-postgres-2` ist der Primary:
 
 <img src="/images/gitea_postgres_primary.png" width="550" />
-
+<br>
 
 - Primary gelöscht:
 
 <img src="/images/primary_gelöscht.png" width="550" />
+<br>
 
 
 - Hier sieht man den automatischen Prozess von Kubernetes und zwar wie er dem 'gitea-postgres-1' die rolle Primary zuteilt und wie der neue pod erstellt und gestartet wird:
 
 <img src="/images/postgres_primary_wechsel.png" width="750" />
+<br>
 
 
 - Alle Pods sind nach kurzer Zeit wieder auf den Beinen:
 
 <img src="/images/erfolgreicher_postgres_failover.png" width="750" />
+<br>
 
 
 - Hier sieht man den Test Live:
@@ -233,16 +244,17 @@ C:\Users\vukadinl\m300-gitea> kubectl get hpa
 NAME  REFERENCE TARGETS MINPODS MAXPODS REPLICAS AGE 
 gitea Deployment/gitea cpu: <unknown>/70% 3 6 3 97s
 ```
-
+<br>
 
 - Deswegen habe ich Resource-Requests/Limits ergänzt, damit HPA überhaupt messen kann:
 
 <img src="/images/gitea_values.png" width="300" />
+<br>
 
 - Nach der Anpassung liefert der HPA jetzt echte CPU-Werte:
 
 <img src="/images/hpa.png" width="550" />
-
+<br>
 
 - Hier sieht man den CPU-Verlauf während des Lasttests:
 
@@ -270,18 +282,17 @@ Um den Crash Alert zu testen, habe ich mit `kubectl exec` den Hauptprozess eines
 - Messwert `Restart count` ausgewählt für den Crash Alert:
 
 <img src="/images/messwert_restart_countt.png" width="750" />
-
-
+<br>
 
 - E-Mail als Benachrichtigungskanal eingetragen:
 
 <img src="/images/übersicht_benachrichtigung.png" width="850" />
-
+<br>
 
 - Beide Alerts erstellt und sind aktiv in der Übersicht:
 
 <img src="/images/überblick_monitoring_richtlinien.png" width="850" />
-
+<br>
 
 **Alert-Test**
 
@@ -290,13 +301,12 @@ Um den Crash Alert zu testen, habe ich mit `kubectl exec` den Hauptprozess eines
 Kubernetes hat den Pod sofort automatisch neugestartet. GCP hat den Anstieg des Restart Counts erkannt und direkt eine E-Mail ausgelöst:
 
 <img src="/images/alert_pod_löschen.png" width="850" />
-
-
+<br>
 
 - Automatische E-Mail von GCP: "Alert firing - Kubernetes Container Restart count is above threshold of 0:
 
 <img src="/images/alert_email_benachrichtigung.png" width="650" />
-
+<br>
 
 - GCP Monitoring zeigt den Vorfall live mit dem Restart-Count-Anstieg:
 
@@ -315,14 +325,14 @@ Das Projekt-Repository wurde auf GitHub erstellt (lukavukadin/m300-gitea, privat
 Weil GCP die Erstellung von Service Account Keys blockiert hat, musste ich stattdessen Workload Identity Federation einrichten - die modernere und sicherere Methode ohne Key-File.
 
 <img src="/images/service_key_error.png" width="950" />
-
+<br>
 
 - Workload Identity Pool und Provider erstellt:
 
 Workload Identity Pool und Provider erfolgreich erstellt, Service Account verknüpft. GitHub Actions kann sich damit ohne Key direkt bei GCP authentifizieren.
 
 <img src="/images/workload_identity_setup.png" width="950" />
-
+<br>
 
 - Workflow-File erstellt:
 
@@ -369,17 +379,17 @@ jobs:
           helm repo update
           helm upgrade gitea gitea-charts/gitea -f kubernetes/gitea-values.yaml --namespace default --wait
 ```
-
+<br>
 
 - Versehentlich gepushter Key - sofort behoben:
 
 <img src="/images/git_rm_key.png" width="550" />
-
+<br>
 
 - GitHub Actions läuft automatisch bei jedem Push:
 
 <img src="/images/github_actions_uebersicht.png" width="980" />
-
+<br>
 
 - Alle Schritte erfolgreich durchgelaufen:
 
@@ -397,12 +407,12 @@ Nachdem das Repository auf GitHub gepusht wurde, waren die Passwörter in gitea-
 - Drei Secrets erfolgreich erstellt:
 
 <img src="/images/github_secrets.png" width="980" />
-
+<br>
 
 - Hier sieht man als beispiel einen Placeholder in diesem File:
 
 <img src="/images/placeholder.png" width="350" />
-
+<br>
 
 - deploy.yml angepasst:
 
@@ -420,17 +430,20 @@ Als letzten Schritt habe ich beide Repositories auf meiner eigenen Gitea-Instanz
 
 - git push:
 <img src="/images/gitea_m300_gepusht.png" width="450" />
+<br>
 
 - OAuth-Authentifizierung:
 <img src="/images/OAuth_Autorisierung.png" width="850" />
+<br>
 
 - Erfolgreich auf meine Git:
 <img src="/images/m300-gitea_erfolgreich_gepusht.png" width="850" />
-
+<br>
 
 - Beim Pushen der Dokumentation (`m300`) trat ein **HTTP 413-Fehler** auf - das Repository war 18 MB gross und der Nginx Ingress blockierte den Upload wegen einer zu kleinen Standard-Request-Grösse:
 
 <img src="/images/gitea_413_error.png" width="450" />
+<br>
 
 
 **Lösung**:
@@ -438,12 +451,12 @@ Als letzten Schritt habe ich beide Repositories auf meiner eigenen Gitea-Instanz
 - Gelöst durch das Hinzufügen der Annotation `nginx.ingress.kubernetes.io/proxy-body-size: "50m"` in der gitea-values.yaml. Diese Annotation sagt dem Nginx Ingress Controller, dass er Requests bis zu 50 MB akzeptieren soll statt dem Standard von 1 MB:
 
 <img src="/images/gitea_values_proxy_body.png" width="450" />
-
+<br>
 
 - Nun auch die Dokumentation erfolgreich gepusht:
 
 <img src="/images/m300_erfolgreich_gepusht.png" width="650" />
-
+<br>
 
 - Hier sieht man die beiden Repos erfolgreich auf meinem Git:
 
