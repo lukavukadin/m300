@@ -407,4 +407,40 @@ Nachdem das Repository auf GitHub gepusht wurde, waren die Passwörter in gitea-
 
 <img src="/images/deploy_angepasst.png" width="550" />
 
+---
+<br>
+
+### Schritt 20: Projekt auf eigener Gitea-Instanz gehostet
+
+
+Als letzten Schritt habe ich beide Repositories auf meiner eigenen Gitea-Instanz unter `git.lukavukadin.ch` gespiegelt, das Projekt hostet sich damit selbst auf der Infrastruktur, die es beschreibt.
+
+- Zuerst habe ich das Projekt-Repository (m300-gitea) auf Gitea erstellt und gepusht. Beim ersten Push öffnete sich automatisch ein Browser-Fenster zur OAuth-Authentifizierung bei meiner eigenen Gitea-Instanz, nach der Bestätigung lief der Push erfolgreich durch:
+
+- git push:
+<img src="/images/gitea_m300_gepusht.png" width="450" />
+
+- OAuth-Authentifizierung:
+<img src="/images/OAuth_Autorisierung.png" width="850" />
+
+- Erfolgreich auf meine Git:
+<img src="/images/m300-gitea_erfolgreich_gepusht.png" width="850" />
+
+
+- Beim Pushen der Dokumentation (`m300`) trat ein **HTTP 413-Fehler** auf - das Repository war 18 MB gross und der Nginx Ingress blockierte den Upload wegen einer zu kleinen Standard-Request-Grösse:
+
+<img src="/images/gitea_413_error.png" width="450" />
+
+
+**Lösung**:
+
+- Gelöst durch das Hinzufügen der Annotation `nginx.ingress.kubernetes.io/proxy-body-size: "50m"` in der gitea-values.yaml. Diese Annotation sagt dem Nginx Ingress Controller, dass er Requests bis zu 50 MB akzeptieren soll statt dem Standard von 1 MB:
+
+<img src="/images/gitea_values_proxy_body.png" width="450" />
+
+
+- Nun auch die Dokumentation erfolgreich gepusht:
+
+<img src="/images/m300_erfolgreich_gepusht.png" width="650" />
+
 
