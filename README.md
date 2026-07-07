@@ -17,6 +17,7 @@ Schulprojekt Modul 300 - Luka Vukadin
 - **GitHub Actions** - CI/CD Pipeline (automatisches Deployment)
 - **GCP Monitoring** - Alerting bei Pod-Ausfall
 
+---
 ## Dokumentation
 
 ### docs/
@@ -27,6 +28,8 @@ Schulprojekt Modul 300 - Luka Vukadin
 - [Rollenkonzept](docs/Rollenkonzept.md) - Service Accounts und Berechtigungen (Least Privilege)
 - [Projektreflexion](docs/Projektreflexion.md) - Abschliessende Reflexion und Selbsteinschätzung
 
+---
 ### Weitere Dateien
+
 - [Architekturdiagramm](Architektursdiagramm.md) - Visualisierung der Gesamtarchitektur
 - [images/](images/) - Screenshots und Beweise aus der Umsetzung
