@@ -27,4 +27,4 @@ Kurze Übersicht zum Modul "Plattformübergreifende Dienste in ein Netzwerk inte
 - /[Umsetzung](Umsetzung.md) - schritt für schritt Ausführung
 - /images - Beweis während der Umsetzung
 - /[Architektursdiagramm](Architektursdiagramm.md) - Projekt bildlich vorstellbar
-- /[ideen](ideen.md) - Projektideen
+- /[Projektideen](Projektideen.md) - Projektideen
