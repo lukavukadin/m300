@@ -444,3 +444,6 @@ Als letzten Schritt habe ich beide Repositories auf meiner eigenen Gitea-Instanz
 <img src="/images/m300_erfolgreich_gepusht.png" width="650" />
 
 
+- Hier sieht man die beiden Repos erfolgreich auf meinem Git:
+
+<img src="/images/repos_erfolgreich_auf_gitea.png" width="950" />

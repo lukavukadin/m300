@@ -198,8 +198,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0be6b8c4a537aece",
+  "active": "0343650201cd6a37",
   "lastOpenFiles": [
+    "images/repos_erfolgreich_auf_gitea.png",
     "images/m300-gitea_erfolgreich_gepusht.png",
     "images/m300_erfolgreich_gepusht.png",
     "images/gitea_values_proxy_body.png",
@@ -221,7 +222,6 @@
     "docs/Rollenkonzept.md",
     "docs/Projektideen.md",
     "images/gcp_kosten.png",
-    "images/github_actions_detail.png",
     "erfolgreicher_failover_test.mp4",
     "files.md",
     "docs",
