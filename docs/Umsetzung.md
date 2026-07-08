@@ -371,7 +371,7 @@ Kubernetes hat den Pod sofort automatisch neugestartet. GCP hat den Anstieg des 
 ### Schritt 19: CI/CD mit GitHub Actions eingerichtet
 
 Das Projekt-Repository wurde auf GitHub erstellt (lukavukadin/m300-gitea, privat). Bei jedem Push auf main deployt GitHub Actions automatisch Gitea auf den GKE-Cluster.
-
+<br>
 
 - Erster Fehler - Service Account Key nicht erlaubt:
 
