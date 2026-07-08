@@ -56,7 +56,7 @@
 -  **Erreichte Resultate:**
     
     - GCP-Projekt erstellt, APIs aktiviert, Terraform-Files geschrieben (VPC, Subnetz, GKE-Cluster, DNS-Zone, Filestore). Cluster steht, alle 3 Nodes sind `Ready`. 
-    - Zusätzlich ein Netzwerkdiagramm erstellt zur Visualisierung der VPC/Subnetz-Struktur.
+    - Zusätzlich ein [Netzwerkdiagramm](diagramme/Netzwerkdiagramm.md) erstellt zur Visualisierung der VPC/Subnetz-Struktur.
     
 	 - [Umsetzung](Umsetzung.md) Schritte 2-5
     
