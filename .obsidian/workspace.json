@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "diagramme/Netzwerkdiagramm.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Netzwerkdiagramm"
             }
           }
         ],
@@ -127,12 +127,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "diagramme/Netzwerkdiagramm.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Ausgehende Links von README öffnen"
+              "title": "Ausgehende Links von Netzwerkdiagramm öffnen"
             }
           },
           {
@@ -200,14 +200,14 @@
   },
   "active": "0be6b8c4a537aece",
   "lastOpenFiles": [
-    "diagramme/Architektursdiagramm.md",
+    "images/netzwerkdiagramm_m300.jpg",
     "diagramme/Netzwerkdiagramm.md",
     "diagramme/Prozessdiagramm.md",
-    "images/netzwerkdiagramm_m300.jpg",
+    "README.md",
+    "diagramme/Architektursdiagramm.md",
     "docs/konzepte/Projektreflexion.md",
     "docs/konzepte/Unbenannt.md",
     "docs/Umsetzung.md",
-    "README.md",
     "docs/konzepte/Technologieentscheid.md",
     "images.md",
     "docs/Projektplanung.md",
@@ -225,7 +225,6 @@
     "images/tls_ingress.png",
     "images/grafana_ingress.png",
     "images/grafana_cloudflare.png",
-    "images/grafana_pods.png",
     "diagramme",
     "erfolgreicher_failover_test.mp4",
     "files.md",
