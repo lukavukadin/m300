@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Technologieentscheid.md",
+                "file": "docs/Umsetzung.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Technologieentscheid"
+              "title": "Umsetzung"
             }
           }
         ],
@@ -127,12 +127,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/Technologieentscheid.md",
+                "file": "docs/Umsetzung.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Ausgehende Links von Technologieentscheid öffnen"
+              "title": "Ausgehende Links von Umsetzung öffnen"
             }
           },
           {
@@ -198,30 +198,31 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0be6b8c4a537aece",
+  "active": "0343650201cd6a37",
   "lastOpenFiles": [
-    "docs/Rollenkonzept.md",
-    "docs/Umsetzung.md",
-    "docs/Testkonzept.md",
+    "images/grafana_pods_network.png",
+    "images/grafana_nodes2.png",
+    "images/grafana_nodes.png",
+    "images/grafana_cluster.png",
+    "images/grafana_url.png",
+    "images/tls_ingress.png",
+    "images/grafana_ingress.png",
+    "images/grafana_cloudflare.png",
+    "images/grafana_pods.png",
+    "images/grafana_install.png",
     "docs/Lernjournal.md",
-    "docs/Technologieentscheid.md",
     "docs/Projektreflexion.md",
+    "docs/Rollenkonzept.md",
+    "docs/Technologieentscheid.md",
+    "docs/Testkonzept.md",
+    "docs/Umsetzung.md",
     "docs/Projektideen.md",
     "docs/Projektkonzept.md",
     "README.md",
     "diagramme/Architektursdiagramm.md",
     "images/bucket_gcp_console.png",
-    "images/backup_completed.png",
-    "images/manual_backup.png",
-    "images/schedule_patch_success.png",
-    "images/kubectl_apply_backup.png",
-    "images/postgres_cluster_angepasst_backup.png",
-    "images/backup_service_account.png",
-    "images/backup_bucket_erstellt.png",
     "diagramme/Prozessdiagramm.md",
-    "images/prozessdiagramm-m300.jpg",
     "images.md",
-    "prozessdiagramm-m300.drawio.png",
     "diagramme",
     "erfolgreicher_failover_test.mp4",
     "files.md",

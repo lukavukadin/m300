@@ -371,6 +371,56 @@ Kubernetes hat den Pod sofort automatisch neugestartet. GCP hat den Anstieg des 
 - GCP Monitoring zeigt den Vorfall live mit dem Restart-Count-Anstieg:
 
 <img src="/images/gcloud_übersicht_alert.png" width="950" />
+<br>
+
+**Grafana installiert:**
+
+- Für eine detailliertere Visualisierung der Cluster-Metriken habe ich zusätzlich `kube-prometheus-stack` via Helm installiert. Das Paket enthält Prometheus (Metriken-Sammler), Grafana (Visualisierung) und vorkonfigurierte Kubernetes-Dashboards:
+
+<img src="/images/grafana_install.png" width="950" />
+<br>
+
+- Alle Pods im `monitoring` Namespace laufen:
+
+<img src="/images/grafana_pods.png" width="950" />
+<br>
+
+- DNS-Eintrag bei Cloudflare erstellt:
+
+<img src="/images/grafana_cloudflare.png" width="400" />
+<br>
+
+-  Ingress für Grafana erstellt:
+
+<img src="/images/grafana_ingress.png" width="500" />
+
+`kubectl apply -f grafana-ingress.yaml` - Ingress mit TLS für `grafana.lukavukadin.ch` erstellt:
+
+<img src="/images/tls_ingress.png" width="500" />
+<br>
+
+- Grafana öffentlich erreichbar unter `https://grafana.lukavukadin.ch`:
+
+<img src="/images/grafana_url.png" width="990" />
+<br>
+
+- Kubernetes Compute Resources / Cluster Dashboard
+	CPU, Memory und Netzwerk-Auslastung des gesamten Clusters in Echtzeit:
+
+<img src="/images/grafana_cluster.png" width="990" />
+<br>
+
+- Node Exporter / Nodes Dashboard
+	Memory 27.9%, Disk 48.9%, Netzwerk-Traffic pro Node sichtbar:
+	
+<img src="/images/grafana_nodes.png" width="990" />
+<img src="/images/grafana_nodes2.png" width="990" />
+<br>
+
+- Kubernetes Networking Dashboard - Netzwerk-Traffic pro Pod:
+
+<img src="/images/grafana_pods_network.png" width="990" />
+
 
 ---
 <br>
