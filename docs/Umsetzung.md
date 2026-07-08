@@ -98,6 +98,7 @@ CloudNativePG Operator via Helm installiert. PostgreSQL-Cluster mit 1 Primary + 
 ### 11. Schritt: PostgreSQL-Backup konfiguriert
 
 Damit die Datenbank im Notfall wiederhergestellt werden kann, habe ich ein automatisches Backup eingerichtet. Jeden Tag um 02:00 Uhr wird ein Backup in einen GCS Bucket gespeichert und 7 Tage aufbewahrt.
+<br>
 
 - Im Terminal erfolgreich Bucket erstellt:
 
@@ -151,6 +152,7 @@ Damit die Datenbank im Notfall wiederhergestellt werden kann, habe ich ein autom
 ### 12. Schritt: Gitea via Helm installiert - Filestore-Mount-Problem gelöst
    
    Gitea-Konfiguration (`gitea-values.yaml`) erstellt, mit Verbindung zu PostgreSQL und TLS via cert-manager. Beim ersten Deployment blieben die Pods tagelang bei `Init:0/3` hängen, mit dem Fehler `MountVolume.MountDevice failed: DeadlineExceeded`. Das war ein bekannter Bug im Filestore-CSI-Treiber – der Mount blockierte dauerhaft auf Node-Ebene, selbst ein Node-Replace half nicht. Gelöst habe ich es, indem ich statt eines neuen automatisch erstellten Volumes das bereits stabile Filestore-Volume aus Terraform manuell als PersistentVolume eingebunden habe. 
+   <br>
    
 - Hier sieht man die Drei Gitea-Pods am fest hängen:
 
@@ -172,6 +174,7 @@ Damit die Datenbank im Notfall wiederhergestellt werden kann, habe ich ein autom
 ### 13. Schritt: PVC-Konflikt und hängender Finalizer behoben
 
 Beim manuellen Einbinden des PersistentVolumes gab es gleich zwei Folgefehler: Helm wollte das PVC nicht übernehmen (fehlende Ownership-Labels), und die Grösse passte nicht zur Helm-Konfiguration. Nach der Korrektur blieb das PVC dann im Status `Terminating` stecken - das liess sich nur lösen, indem ich den Kubernetes-Finalizer manuell per Patch entfernt habe.
+<br>
 
 - PV/PVC manuell erstellt als Workaround:				
 
@@ -195,6 +198,7 @@ Beim manuellen Einbinden des PersistentVolumes gab es gleich zwei Folgefehler: H
 Der DNS-Eintrag bei Hostpoint war korrekt, trotzdem zeigte `nslookup` weiterhin Cloudflare-IPs statt meiner Load-Balancer-IP. 
 
 Grund: Ich habe vergessen das ich meine Domain zusätzlich über Cloudflare verwalte, das die Hostpoint-Einträge überschreibt. Lösung: A-Record direkt in Cloudflare erstellt. Danach war Gitea unter `https://git.lukavukadin.ch` mit gültigem HTTPS erreichbar, Admin-Login funktionierte.
+<br>
 
 - A-Record in Cloudflare erstellt:
 
@@ -217,6 +221,7 @@ Grund: Ich habe vergessen das ich meine Domain zusätzlich über Cloudflare verw
 ### 15. Schritt: Failover-Test - Gitea-Pod gelöscht, Webseite blieb online
 
 Nach dem Hochskalieren auf 3 Replicas habe ich einen Pod-Ausfall simuliert, um die Hochverfügbarkeit zu testen. Ich habe einen laufenden Gitea-Pod manuell gelöscht und parallel die Webseite im Browser mehrmals neu geladen. Kubernetes hat sofort einen Ersatz-Pod erstellt, die Webseite war zu keinem Zeitpunkt nicht erreichbar.
+<br>
 
 - replicaCount auf 3 erhöht:
 
@@ -253,6 +258,7 @@ Nach dem Hochskalieren auf 3 Replicas habe ich einen Pod-Ausfall simuliert, um d
 ### 16. Schritt: Failover-Test -PostgreSQL-Primary gelöscht, automatischer Wechsel
 
 Anschliessend habe ich den Datenbank-Failover getestet. Ich habe geprüft, welcher PostgreSQL-Pod aktuell der Primary ist, diesen gelöscht und beobachtet, wie CloudNativePG automatisch eine Replica zum neuen Primary befördert. Während des gesamten Vorgangs (ca. 3:46 Minuten) habe ich wiederholt versucht, mich bei Gitea einzuloggen - der Login funktionierte durchgehend ohne Unterbruch.
+<br>
 
 - `gitea-postgres-2` ist der Primary:
 
@@ -289,6 +295,7 @@ Anschliessend habe ich den Datenbank-Failover getestet. Ich habe geprüft, welch
 HPA eingerichtet, der Gitea zwischen 3 und 6 Pods skaliert, abhängig von der CPU-Auslastung (Ziel: 70%). Dafür mussten erst Resource-Requests/Limits ergänzt werden, da diese fehlten.
 
 Zum Testen habe ich mit `busybox`-Pods künstliche Last erzeugt. Mit ca. 60 parallelen Lasttest-Pods stieg die CPU bis auf 70%, blieb aber knapp unter der Schwelle - Kubernetes skaliert erst bei klarer Überschreitung, um Flackern zu vermeiden. Mit 200 Lasttest-Pods kam dann nicht mehr Gitea, sondern der ganze Cluster an seine Grenze: Ein PostgreSQL-Pod konnte seine Health-Checks kurz nicht mehr beantworten und wurde automatisch neu gestartet. Nach dem Test hat sich alles innerhalb wenigen Minuten von selbst erholt, ohne Datenverlust.
+<br>
 
 - Als ich den befehl `kubectl get hpa` durchgeführt habe kam als cpu unknown:
 
@@ -461,6 +468,7 @@ jobs:
 Nachdem das Repository auf GitHub gepusht wurde, waren die Passwörter in gitea-values.yaml und postgres-cluster.yaml noch im Klartext sichtbar. Da das Repo privat ist, war das kein unmittelbares Sicherheitsproblem, aber trotzdem schlechte Praxis.
 
 **Lösung:** Passwörter durch PLACEHOLDER ersetzt und die echten Werte als GitHub Secrets gespeichert. Der GitHub Actions Workflow übergibt die Secrets beim Deployment via --set an Helm - so sind sie nie im Code sichtbar.
+<br>
 
 - Drei Secrets erfolgreich erstellt:
 
@@ -483,10 +491,10 @@ Nachdem das Repository auf GitHub gepusht wurde, waren die Passwörter in gitea-
 
 
 Als letzten Schritt habe ich beide Repositories auf meiner eigenen Gitea-Instanz unter `git.lukavukadin.ch` gespiegelt, das Projekt hostet sich damit selbst auf der Infrastruktur, die es beschreibt.
+<br>
 
 - Zuerst habe ich das Projekt-Repository (m300-gitea) auf Gitea erstellt und gepusht. Beim ersten Push öffnete sich automatisch ein Browser-Fenster zur OAuth-Authentifizierung bei meiner eigenen Gitea-Instanz, nach der Bestätigung lief der Push erfolgreich durch:
 
-- git push:
 <img src="/images/gitea_m300_gepusht.png" width="450" />
 <br>
 
