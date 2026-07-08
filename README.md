@@ -30,9 +30,8 @@ Schulprojekt Modul 300 - Luka Vukadin
 
 ---
 ### [diagramme/](diagramme/)
-- [Architekturdiagramm](Architektursdiagramm.md) - Visualisierung der Gesamtarchitektur
-- [Prozessdiagramm](Prozessdiagramm.md) - Prozessvisualisierung von der Automatisierug
-
+- [Architekturdiagramm](diagramme/Architektursdiagramm.md) - Visualisierung der Gesamtarchitektur
+- [Prozessdiagramm](diagramme/Prozessdiagramm.md) - Prozessvisualisierung von der Automatisierug
 ---
 ### [images/](images/)
 - Screenshots und Beweise aus der Umsetzung
