@@ -20,7 +20,7 @@ Schulprojekt Modul 300 - Luka Vukadin
 ---
 ## Dokumentation
 
-### docs/
+### [docs/](docs/)
 - [Tagesjournal](docs/Tagesjournal.md) - Wöchentliches Lernjournal (21.05.–09.07.2026)
 - [Umsetzung](docs/Umsetzung.md) - Schritt-für-Schritt Ausführung mit Screenshots (19 Schritte)
 - [Technologieentscheid](docs/Technologieentscheid.md) - Begründung der gewählten Technologien und Kosten
@@ -29,7 +29,10 @@ Schulprojekt Modul 300 - Luka Vukadin
 - [Projektreflexion](docs/Projektreflexion.md) - Abschliessende Reflexion und Selbsteinschätzung
 
 ---
-### Weitere Dateien
-
+### [diagramme/](diagramme/)
 - [Architekturdiagramm](Architektursdiagramm.md) - Visualisierung der Gesamtarchitektur
-- [images/](images/) - Screenshots und Beweise aus der Umsetzung
+- [Prozessdiagramm](Prozessdiagramm.md) - Prozessvisualisierung von der Automatisierug
+
+---
+### [images/](images/)
+- Screenshots und Beweise aus der Umsetzung
