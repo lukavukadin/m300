@@ -31,10 +31,10 @@
 - **Geplante Tagesziele:**
 	- Den Theorie-Input der Lehrperson verstehen.
 	- Anforderungen für die Gitea-Architektur recherchieren.
-	- [Architektursdiagramm](Architektursdiagramm.md) erstellt
+	- [Architektursdiagramm](/diagramme/Architektursdiagramm.md) erstellt
 
 - **Erreichte Resultate:**
-    - Ich habe das Kubernetes-Klassenbeispiel analysiert. Ich habe mich theoretisch eingelesen, wie Gitea mit mehreren Frontends umgehen kann. Zusätzlich habe ich ein [Architektursdiagramm](Architektursdiagramm.md) erstellt, damit man sich das Projekt Visuell besser vorstellen kann.
+    - Ich habe das Kubernetes-Klassenbeispiel analysiert. Ich habe mich theoretisch eingelesen, wie Gitea mit mehreren Frontends umgehen kann. Zusätzlich habe ich ein [Architektursdiagramm](/diagramme/Architektursdiagramm.md) erstellt, damit man sich das Projekt Visuell besser vorstellen kann.
 
 	- [Umsetzung](Umsetzung.md) Schritt 1
 

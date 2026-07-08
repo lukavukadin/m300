@@ -4,9 +4,9 @@
 
 ### 1. Schritt: Architektursdiagramm:
 
-Als erstes habe ich ein [Architektursdiagramm](../Architektursdiagramm.md) erstellt und konnte so nachdenken und überlegen wie ich mein Projekt aufgebaut werden soll
+Als erstes habe ich ein [Architektursdiagramm](/diagramme/Architektursdiagramm.md) erstellt und konnte so nachdenken und überlegen wie ich mein Projekt aufgebaut werden soll
 
-<img src="/images/planung_m300.jpg" width="600" />
+<img src="/images/architektursdiagramm_m300.jpg" width="600" />
 
 ----
 <br>
