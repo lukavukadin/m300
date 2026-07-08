@@ -24,7 +24,7 @@ Schulprojekt Modul 300 - Luka Vukadin
 ### [docs/](docs/)
 - [Lernjournal](docs/Lernjournal.md) - Wöchentliches Lernjournal
 - [Umsetzung](docs/Umsetzung.md) - Schritt-für-Schritt Ausführung (21 Schritte)
-- [Projektkonzept](docs/Projektkonzept.md) - Projektplanung vor der Umsetzung
+- [Projektplanung](docs/Projektplanung.md) - Projektplanung vor der Umsetzung
 - [Projektideen](docs/Projektideen.md) - Ursprüngliche Projektideen
 
 ### [docs/konzepte/)](docs/konzepte/))
