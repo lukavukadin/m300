@@ -95,7 +95,60 @@ CloudNativePG Operator via Helm installiert. PostgreSQL-Cluster mit 1 Primary + 
 ---
 <br>
 
-### 11. Schritt: Gitea via Helm installiert - Filestore-Mount-Problem gelöst
+### 11. Schritt: PostgreSQL-Backup konfiguriert
+
+Damit die Datenbank im Notfall wiederhergestellt werden kann, habe ich ein automatisches Backup eingerichtet. Jeden Tag um 02:00 Uhr wird ein Backup in einen GCS Bucket gespeichert und 7 Tage aufbewahrt.
+
+- Im Terminal erfolgreich Bucket erstellt:
+
+<img src="/images/backup_bucket_erstellt.png" width="990" />
+<br>
+
+- Service Account erstellt und Berechtigungen vergeben, danach Workload Identity verknüpft damit der PostgreSQL-Pod sich ohne Key bei GCS authentifizieren kann:
+
+<img src="/images/backup_service_account.png" width="990" />
+<br>
+
+- `postgres-cluster.yaml` angepasst. 
+  Drei Ergänzungen: `serviceAccountTemplate` (verknüpft Pod mit GCP Service Account), `backup` (Ziel-Bucket + 7 Tage Aufbewahrung), `ScheduledBackup` (täglich 02:00 Uhr):
+
+<img src="/images/postgres_cluster_angepasst_backup.png" width="590" />
+<br>
+
+- `kubectl apply` ausgeführt und Konfiguration übernommen.
+	Zwei Warnungen erschienen: Barman Cloud wird in einer späteren CloudNativePG-Version entfernt (für mein Projekt irrelevant), und der Schedule hatte ein falsches Format (5 statt 6 Argumente):
+
+<img src="/images/kubectl_apply_backup.png" width="990" />
+<br>
+
+- Schedule-Format-Fehler behoben.
+	Direkter Patch-Befehl schlug fehl wegen Windows-Anführungszeichen-Problem. Gelöst durch eine separate `patch-backup.json` Datei mit dem korrekten 6-stelligen Cron-Format (`0 0 2 * * *`):
+	
+<img src="/images/schedule_patch_success.png" width="990" />
+<br>
+
+- Manuelles Backup zum Testen erstellt.
+	Ein einmaliges Backup-Objekt das sofort ausgeführt wird, um die Konfiguration zu testen ohne auf 02:00 Uhr zu warten:
+
+<img src="/images/manual_backup.png" width="390" />
+<br>
+
+- Manuelles Backup erfolgreich abgeschlossen.
+	`kubectl get backup --watch` zeigt den Fortschritt: `running` → `completed` in 14 Sekunden. Methode: `barmanObjectStore`.
+
+<img src="/images/backup_completed.png" width="890" />
+<br>
+
+- Backup-Datei im GCS Bucket sichtbar.
+	GCS Bucket enthält `data.tar` (44 MB) und `backup.info`  die gesicherten PostgreSQL-Daten vom 08.07.2026, 10:01 Uhr. Beweis dass das Backup tatsächlich in der Cloud gespeichert wurde:
+	
+<img src="/images/bucket_gcp_console.png" width="990" />
+
+
+---
+<br>
+
+### 12. Schritt: Gitea via Helm installiert - Filestore-Mount-Problem gelöst
    
    Gitea-Konfiguration (`gitea-values.yaml`) erstellt, mit Verbindung zu PostgreSQL und TLS via cert-manager. Beim ersten Deployment blieben die Pods tagelang bei `Init:0/3` hängen, mit dem Fehler `MountVolume.MountDevice failed: DeadlineExceeded`. Das war ein bekannter Bug im Filestore-CSI-Treiber – der Mount blockierte dauerhaft auf Node-Ebene, selbst ein Node-Replace half nicht. Gelöst habe ich es, indem ich statt eines neuen automatisch erstellten Volumes das bereits stabile Filestore-Volume aus Terraform manuell als PersistentVolume eingebunden habe. 
    
@@ -116,7 +169,7 @@ CloudNativePG Operator via Helm installiert. PostgreSQL-Cluster mit 1 Primary + 
 ----
 <br>
 
-### 12. Schritt: PVC-Konflikt und hängender Finalizer behoben
+### 13. Schritt: PVC-Konflikt und hängender Finalizer behoben
 
 Beim manuellen Einbinden des PersistentVolumes gab es gleich zwei Folgefehler: Helm wollte das PVC nicht übernehmen (fehlende Ownership-Labels), und die Grösse passte nicht zur Helm-Konfiguration. Nach der Korrektur blieb das PVC dann im Status `Terminating` stecken - das liess sich nur lösen, indem ich den Kubernetes-Finalizer manuell per Patch entfernt habe.
 
@@ -137,7 +190,7 @@ Beim manuellen Einbinden des PersistentVolumes gab es gleich zwei Folgefehler: H
 ----
 <br>
 
-### 13. Schritt: DNS/Cloudflare-Konflikt gelöst & Gitea live getestet
+### 14. Schritt: DNS/Cloudflare-Konflikt gelöst & Gitea live getestet
 
 Der DNS-Eintrag bei Hostpoint war korrekt, trotzdem zeigte `nslookup` weiterhin Cloudflare-IPs statt meiner Load-Balancer-IP. 
 
@@ -161,7 +214,7 @@ Grund: Ich habe vergessen das ich meine Domain zusätzlich über Cloudflare verw
 ----
 <br>
 
-### 14. Schritt: Failover-Test - Gitea-Pod gelöscht, Webseite blieb online
+### 15. Schritt: Failover-Test - Gitea-Pod gelöscht, Webseite blieb online
 
 Nach dem Hochskalieren auf 3 Replicas habe ich einen Pod-Ausfall simuliert, um die Hochverfügbarkeit zu testen. Ich habe einen laufenden Gitea-Pod manuell gelöscht und parallel die Webseite im Browser mehrmals neu geladen. Kubernetes hat sofort einen Ersatz-Pod erstellt, die Webseite war zu keinem Zeitpunkt nicht erreichbar.
 
@@ -197,7 +250,7 @@ Nach dem Hochskalieren auf 3 Replicas habe ich einen Pod-Ausfall simuliert, um d
 ---
 <br>
 
-### 15. Schritt: Failover-Test -PostgreSQL-Primary gelöscht, automatischer Wechsel
+### 16. Schritt: Failover-Test -PostgreSQL-Primary gelöscht, automatischer Wechsel
 
 Anschliessend habe ich den Datenbank-Failover getestet. Ich habe geprüft, welcher PostgreSQL-Pod aktuell der Primary ist, diesen gelöscht und beobachtet, wie CloudNativePG automatisch eine Replica zum neuen Primary befördert. Während des gesamten Vorgangs (ca. 3:46 Minuten) habe ich wiederholt versucht, mich bei Gitea einzuloggen - der Login funktionierte durchgehend ohne Unterbruch.
 
@@ -231,7 +284,7 @@ Anschliessend habe ich den Datenbank-Failover getestet. Ich habe geprüft, welch
 ----
 <br>
 
-### 16. Schritt: Horizontal Pod Autoscaler (HPA) konfiguriert und getestet
+### 17. Schritt: Horizontal Pod Autoscaler (HPA) konfiguriert und getestet
 
 HPA eingerichtet, der Gitea zwischen 3 und 6 Pods skaliert, abhängig von der CPU-Auslastung (Ziel: 70%). Dafür mussten erst Resource-Requests/Limits ergänzt werden, da diese fehlten.
 
@@ -263,7 +316,7 @@ gitea Deployment/gitea cpu: <unknown>/70% 3 6 3 97s
 ----
 <br>
 
-### Schritt 17: Monitoring & Alerting eingerichtet
+### Schritt 18: Monitoring & Alerting eingerichtet
 
 GCP Monitoring sammelt automatisch Metriken vom GKE-Cluster. Über das GKE Cluster Monitoring Dashboard lassen sich CPU, Memory, Netzwerk und Pod-Status in Echtzeit beobachten.
 
@@ -315,7 +368,7 @@ Kubernetes hat den Pod sofort automatisch neugestartet. GCP hat den Anstieg des 
 ---
 <br>
 
-### Schritt 18: CI/CD mit GitHub Actions eingerichtet
+### Schritt 19: CI/CD mit GitHub Actions eingerichtet
 
 Das Projekt-Repository wurde auf GitHub erstellt (lukavukadin/m300-gitea, privat). Bei jedem Push auf main deployt GitHub Actions automatisch Gitea auf den GKE-Cluster.
 
@@ -395,10 +448,15 @@ jobs:
 
 <img src="/images/github_actions_detail.png" width="980" />
 
+
+- Hier der Prozessablauf als Flussdiagramm:
+
+<img src="/images/prozessdiagramm-m300.jpg" width="480" />
+
 ----
 <br>
 
-### Schritt 19: Secrets-Management – Passwörter aus Code entfernt
+### Schritt 20: Secrets-Management – Passwörter aus Code entfernt
 
 Nachdem das Repository auf GitHub gepusht wurde, waren die Passwörter in gitea-values.yaml und postgres-cluster.yaml noch im Klartext sichtbar. Da das Repo privat ist, war das kein unmittelbares Sicherheitsproblem, aber trotzdem schlechte Praxis.
 
@@ -421,7 +479,7 @@ Nachdem das Repository auf GitHub gepusht wurde, waren die Passwörter in gitea-
 ---
 <br>
 
-### Schritt 20: Projekt auf eigener Gitea-Instanz gehostet
+### Schritt 21: Projekt auf eigener Gitea-Instanz gehostet
 
 
 Als letzten Schritt habe ich beide Repositories auf meiner eigenen Gitea-Instanz unter `git.lukavukadin.ch` gespiegelt, das Projekt hostet sich damit selbst auf der Infrastruktur, die es beschreibt.
