@@ -36,7 +36,8 @@ Schulprojekt Modul 300 - Luka Vukadin
 ---
 ### [diagramme/](diagramme/)
 - [Architekturdiagramm](diagramme/Architektursdiagramm.md) - Visualisierung der Gesamtarchitektur
-- [Prozessdiagramm CI/CD](diagramme/Prozessdiagramm_CICD.md) - Ablauf der GitHub Actions Pipeline
+- [Prozessdiagramm CI/CD](diagramme/Prozessdiagramm.md) - Ablauf der GitHub Actions Pipeline
+- [Netzwerkdiagramm](diagramme/Netzwerkdiagramm.md) - ....
 
 ---
 ### [images/](images/)
