@@ -21,7 +21,7 @@ Schulprojekt Modul 300 - Luka Vukadin
 ## Dokumentation
 
 ### [docs/](docs/)
-- [Tagesjournal](docs/Tagesjournal.md) - Wöchentliches Lernjournal (21.05.–09.07.2026)
+- [Lernjournal](Lernjournal.md) - Wöchentliches Lernjournal (21.05.–09.07.2026)
 - [Umsetzung](docs/Umsetzung.md) - Schritt-für-Schritt Ausführung mit Screenshots (19 Schritte)
 - [Technologieentscheid](docs/Technologieentscheid.md) - Begründung der gewählten Technologien und Kosten
 - [Testkonzept](docs/Testkonzept.md) - Durchgeführte Tests (Failover, HPA, Monitoring, CI/CD)

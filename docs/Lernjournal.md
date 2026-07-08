@@ -91,20 +91,23 @@
     - Filestore als Shared Storage einbinden
     - PostgreSQL-Cluster deployen
     - Gitea installieren und über die Domain testen.
+    - PostgreSQL-Backup konfigurieren
 
 - **Erreichte Resultate:**
     - Filestore-CSI-Driver aktiviert, PostgreSQL-Cluster (1 Primary + 2 Replicas) läuft, Gitea erfolgreich deployt. 
+
+	- Zusätzlich automatisches PostgreSQL-Backup konfiguriert: tägliches Backup in GCS Bucket, manueller Test erfolgreich (PHASE: completed).
     
     - Gitea ist unter `https://git.lukavukadin.ch` erreichbar, mit gültigem HTTPS und funktionierendem Admin-Login. 
     
-    - [Umsetzung](Umsetzung.md) Schritte 9-13
+    - [Umsetzung](Umsetzung.md) Schritte 9-14
     
 - **Aufgetretene Probleme & Reflexion:**
 	- Das war eindeutig der härteste Teil und hat sich über Tage gezogen. Zuerst hat ein Bug im Filestore-Treiber den Mount blockiert, am Ende half nur das bestehende Filestore-Volume von Hand einzubinden. Kaum war das gelöst, gab es Probleme mit Helm und einem PVC, das sich nicht löschen liess. Zum Schluss hat mich die Domain nochmal ausgebremst, weil ich vergessen hatte, dass Cloudflare meine DNS-Einträge überschreibt.
 
     
 - **Eingesetzte Ressourcen:**
-    - CloudNativePG Dokumentation, Gitea Helm Chart, GCP Filestore Dokumentation, Cloudflare DNS-Verwaltung
+    - CloudNativePG Dokumentation, Gitea Helm Chart, GCP Filestore Dokumentation, Cloudflare DNS-Verwaltung, Google Cloud Storage
 
 ----
 ##  25.06.2026 – Hochverfügbarkeit, HPA & Tests
@@ -117,7 +120,7 @@
 - **Erreichte Resultate:**
     - Auf 3 Replicas skaliert, beide Failover-Tests erfolgreich (Gitea-Pod und PostgreSQL-Primary), HPA eingerichtet und mit Last getestet.
     
-	- [Umsetzung](Umsetzung.md) Schritte 14-16
+	- [Umsetzung](Umsetzung.md) Schritte 15-17
     
 - **Aufgetretene Probleme & Reflexion:**
     - HPA brauchte erst Resource-Requests, um überhaupt zu messen. Bei starker Last kam nicht Gitea, sondern der ganze Cluster an seine Grenze – ein Postgres-Pod wurde kurz unhealthy, erholte sich aber selbst.
@@ -132,12 +135,14 @@
 
 - **Geplante Tagesziele:**
     - Monitoring einrichten und Alerting konfigurieren.
+    - Secrets-Management einrichten (Passwörter aus Code entfernen).
+    - Prozessdiagramm CI/CD erstellen.
 	- GitHub Actions Pipeline für automatisches Deployment einrichten (CI/CD).
     
 - **Erreichte Resultate:**
     - Zwei Alert-Richtlinien eingerichtet und getestet (E-Mail kam automatisch). GitHub Actions Workflow erstellt - bei jedem Push deployt er Gitea automatisch auf GKE. Passwörter durch GitHub Secrets ersetzt.
     
-	- [Umsetzung](Umsetzung.md) Schritte 17 - 18
+	- [Umsetzung](Umsetzung.md) Schritte 18 - 20
     
 
 - **Aufgetretene Probleme & Reflexion:**
@@ -152,15 +157,19 @@
 ##  09.07.2026 – Modulteiltag 8: Abgabe & Finalisierung
 
 - **Geplante Tagesziele:**
+	- Beide Repos auf eigener Gitea-Instanz spiegeln.
     - Dokumentation fertigstellen
     - Repo aufräumen
     - Projekt abgeben
     
 - **Erreichte Resultate:**
     
+    - Beide Repositories (m300 und m300-gitea) erfolgreich auf git.lukavukadin.ch gespiegelt, das Projekt hostet sich selbst auf der Infrastruktur die es beschreibt.
     - Technologieentscheid (A1), Testkonzept (B1) und Rollenkonzept (I1) dokumentiert.
     - Lernjournal vollständig ausgefüllt, Abschlussreflexion geschrieben, Projekt abgegeben.
-    
+
+	- [Umsetzung](Umsetzung.md) Schritt 21
+
 - **Aufgetretene Probleme & Reflexion:**
     
     - Keine
@@ -169,3 +178,4 @@
     
     - Alle bisherigen Ressourcen
     - GitHub Repository (finale Version)
+    - git.lukavukadin.ch (eigene Gitea-Instanz)

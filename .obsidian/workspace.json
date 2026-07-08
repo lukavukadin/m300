@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Umsetzung.md",
+                "file": "docs/Lernjournal.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Umsetzung"
+              "title": "Lernjournal"
             }
           }
         ],
@@ -127,12 +127,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/Umsetzung.md",
+                "file": "docs/Lernjournal.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Ausgehende Links von Umsetzung öffnen"
+              "title": "Ausgehende Links von Lernjournal öffnen"
             }
           },
           {
@@ -200,14 +200,16 @@
   },
   "active": "0be6b8c4a537aece",
   "lastOpenFiles": [
+    "README.md",
+    "docs/Umsetzung.md",
+    "docs/Lernjournal.md",
+    "docs/Testkonzept.md",
     "images/bucket_gcp_console.png",
     "docs/Projektideen.md",
     "docs/Projektkonzept.md",
     "docs/Projektreflexion.md",
     "docs/Rollenkonzept.md",
-    "docs/Tagesjournal.md",
     "docs/Technologieentscheid.md",
-    "docs/Umsetzung.md",
     "images/backup_completed.png",
     "images/manual_backup.png",
     "images/schedule_patch_success.png",
@@ -215,15 +217,12 @@
     "images/postgres_cluster_angepasst_backup.png",
     "images/backup_service_account.png",
     "images/backup_bucket_erstellt.png",
-    "docs/Testkonzept.md",
     "diagramme/Prozessdiagramm.md",
-    "README.md",
     "diagramme/Architektursdiagramm.md",
     "images/prozessdiagramm-m300.jpg",
     "images.md",
     "prozessdiagramm-m300.drawio.png",
     "diagramme",
-    "images/repos_erfolgreich_auf_gitea.png",
     "erfolgreicher_failover_test.mp4",
     "files.md",
     "docs",
