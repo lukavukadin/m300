@@ -31,7 +31,7 @@
 - **Geplante Tagesziele:**
 	- Den Theorie-Input der Lehrperson verstehen.
 	- Anforderungen für die Gitea-Architektur recherchieren.
-	- [Architektursdiagramm](/diagramme/Architektursdiagramm.md) erstellt
+	- [Architektursdiagramm](/diagramme/Architektursdiagramm.md) erstellen
 
 - **Erreichte Resultate:**
     - Ich habe das Kubernetes-Klassenbeispiel analysiert. Ich habe mich theoretisch eingelesen, wie Gitea mit mehreren Frontends umgehen kann. Zusätzlich habe ich ein [Architektursdiagramm](/diagramme/Architektursdiagramm.md) erstellt, damit man sich das Projekt Visuell besser vorstellen kann.
@@ -56,6 +56,7 @@
 -  **Erreichte Resultate:**
     
     - GCP-Projekt erstellt, APIs aktiviert, Terraform-Files geschrieben (VPC, Subnetz, GKE-Cluster, DNS-Zone, Filestore). Cluster steht, alle 3 Nodes sind `Ready`. 
+    - Zusätzlich ein Netzwerkdiagramm erstellt zur Visualisierung der VPC/Subnetz-Struktur.
     
 	 - [Umsetzung](Umsetzung.md) Schritte 2-5
     
@@ -136,11 +137,12 @@
 - **Geplante Tagesziele:**
     - Monitoring einrichten und Alerting konfigurieren.
     - Secrets-Management einrichten (Passwörter aus Code entfernen).
-    - Prozessdiagramm CI/CD erstellen.
+    - [Prozessdiagramm CI/CD](diagramme/Prozessdiagramm.md) erstellen.
 	- GitHub Actions Pipeline für automatisches Deployment einrichten (CI/CD).
     
 - **Erreichte Resultate:**
     - Zwei Alert-Richtlinien eingerichtet und getestet (E-Mail kam automatisch). GitHub Actions Workflow erstellt - bei jedem Push deployt er Gitea automatisch auf GKE. Passwörter durch GitHub Secrets ersetzt.
+    - [Prozessdiagramm CI/CD](diagramme/Prozessdiagramm.md) erstellt
     
 	- [Umsetzung](Umsetzung.md) Schritte 18 - 20
     
@@ -181,4 +183,3 @@
     - Alle bisherigen Ressourcen
     - GitHub Repository (finale Version)
     - git.lukavukadin.ch (eigene Gitea-Instanz)
-    - Grafana

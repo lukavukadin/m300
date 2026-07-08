@@ -1,2 +1,2 @@
-<img src="/images/netzwerkdiagramm_m300.jpg" width="999" />
+<img src="/images/netzwerkdiagramm-m300.jpg" width="999" />
 

@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "diagramme/Netzwerkdiagramm.md",
+                "file": "docs/Lernjournal.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Netzwerkdiagramm"
+              "title": "Lernjournal"
             }
           }
         ],
@@ -127,12 +127,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "diagramme/Netzwerkdiagramm.md",
+                "file": "docs/Lernjournal.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Ausgehende Links von Netzwerkdiagramm öffnen"
+              "title": "Ausgehende Links von Lernjournal öffnen"
             }
           },
           {
@@ -200,22 +200,23 @@
   },
   "active": "0be6b8c4a537aece",
   "lastOpenFiles": [
-    "images/netzwerkdiagramm_m300.jpg",
+    "docs/Umsetzung.md",
+    "docs/konzepte/Testkonzept.md",
     "diagramme/Netzwerkdiagramm.md",
-    "diagramme/Prozessdiagramm.md",
+    "docs/konzepte/Rollenkonzept.md",
     "README.md",
+    "docs/Lernjournal.md",
+    "docs/Projektideen.md",
+    "docs/Projektplanung.md",
+    "images/netzwerkdiagramm_m300.jpg",
+    "images/netzwerkdiagramm-m300.jpg",
+    "diagramme/Prozessdiagramm.md",
     "diagramme/Architektursdiagramm.md",
     "docs/konzepte/Projektreflexion.md",
     "docs/konzepte/Unbenannt.md",
-    "docs/Umsetzung.md",
     "docs/konzepte/Technologieentscheid.md",
     "images.md",
-    "docs/Projektplanung.md",
-    "docs/Projektideen.md",
     "docs.md",
-    "docs/konzepte/Rollenkonzept.md",
-    "docs/Lernjournal.md",
-    "docs/konzepte/Testkonzept.md",
     "docs/konzepte",
     "images/grafana_pods_network.png",
     "images/grafana_nodes2.png",

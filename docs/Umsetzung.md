@@ -28,6 +28,10 @@ Drei Terraform-Files erstellt (`main.tf`, `variables.tf`, `outputs.tf`) die folg
 
 <img src="/images/vs_einblick.png" width="600" />
 
+- Zur besseren Übersicht habe ich zusätzlich ein Netzwerkdiagramm erstellt, das die VPC-, Subnetz- und Cluster-Struktur zeigt:
+
+<img src="/images/netzwerkdiagramm-m300.jpg" width="600" />
+
 ----
 <br>
 
