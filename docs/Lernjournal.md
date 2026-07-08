@@ -158,6 +158,7 @@
 
 - **Geplante Tagesziele:**
 	- Beide Repos auf eigener Gitea-Instanz spiegeln.
+	- Grafana installieren
     - Dokumentation fertigstellen
     - Repo aufräumen
     - Projekt abgeben
@@ -167,6 +168,7 @@
     - Beide Repositories (m300 und m300-gitea) erfolgreich auf git.lukavukadin.ch gespiegelt, das Projekt hostet sich selbst auf der Infrastruktur die es beschreibt.
     - Technologieentscheid (A1), Testkonzept (B1) und Rollenkonzept (I1) dokumentiert.
     - Lernjournal vollständig ausgefüllt, Abschlussreflexion geschrieben, Projekt abgegeben.
+    - Grafana mit Prometheus (kube-prometheus-stack) installiert und öffentlich unter https://grafana.lukavukadin.ch erreichbar.
 
 	- [Umsetzung](Umsetzung.md) Schritt 21
 
@@ -179,3 +181,4 @@
     - Alle bisherigen Ressourcen
     - GitHub Repository (finale Version)
     - git.lukavukadin.ch (eigene Gitea-Instanz)
+    - Grafana
