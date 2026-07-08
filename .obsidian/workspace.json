@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "diagramme/Prozessdiagramm.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Prozessdiagramm"
             }
           }
         ],
@@ -127,12 +127,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "diagramme/Prozessdiagramm.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Ausgehende Links von README öffnen"
+              "title": "Ausgehende Links von Prozessdiagramm öffnen"
             }
           },
           {
@@ -200,14 +200,14 @@
   },
   "active": "0be6b8c4a537aece",
   "lastOpenFiles": [
+    "diagramme/Architektursdiagramm.md",
+    "images/prozessdiagramm-m300.jpg",
+    "diagramme/Prozessdiagramm.md",
+    "README.md",
     "docs/Umsetzung.md",
     "docs/Testkonzept.md",
     "docs/Projektideen.md",
-    "diagramme/Prozessdiagramm.md",
-    "diagramme/Architektursdiagramm.md",
-    "README.md",
     "images.md",
-    "images/prozessdiagramm-m300.jpg",
     "prozessdiagramm-m300.drawio.png",
     "docs/Technologieentscheid.md",
     "docs/Tagesjournal.md",
@@ -221,8 +221,6 @@
     "images/gitea_values_proxy_body.png",
     "images/gitea_413_error.png",
     "images/OAuth_Autorisierung.png",
-    "images/gitea_m300_gepusht.png",
-    "images/deploy_angepasst.png",
     "erfolgreicher_failover_test.mp4",
     "files.md",
     "docs",
