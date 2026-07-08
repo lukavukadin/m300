@@ -172,7 +172,7 @@
 
 - **Aufgetretene Probleme & Reflexion:**
     
-    - Keine
+    - HTTP 413-Fehler beim Pushen der Doku (m300) - Repo war 18 MB gross, Nginx Ingress hatte zu kleines Request-Limit. Gelöst durch `nginx.ingress.kubernetes.io/proxy-body-size: "50m"` in `gitea-values.yaml.
         
 - **Eingesetzte Ressourcen:**
     

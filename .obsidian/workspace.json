@@ -202,6 +202,7 @@
   "lastOpenFiles": [
     "README.md",
     "docs/Umsetzung.md",
+    "diagramme/Architektursdiagramm.md",
     "docs/Lernjournal.md",
     "docs/Testkonzept.md",
     "images/bucket_gcp_console.png",
@@ -218,7 +219,6 @@
     "images/backup_service_account.png",
     "images/backup_bucket_erstellt.png",
     "diagramme/Prozessdiagramm.md",
-    "diagramme/Architektursdiagramm.md",
     "images/prozessdiagramm-m300.jpg",
     "images.md",
     "prozessdiagramm-m300.drawio.png",
