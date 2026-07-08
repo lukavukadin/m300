@@ -22,8 +22,10 @@ Schulprojekt Modul 300 - Luka Vukadin
 ## Dokumentation
 
 ### [docs/](docs/)
-- [Lernjournal](docs/Lernjournal.md) - Wöchentliches Lernjournal (21.05.–09.07.2026)
-- [Umsetzung](docs/Umsetzung.md) - Schritt-für-Schritt Ausführung mit Screenshots (21 Schritte)
+- [Lernjournal](docs/Lernjournal.md) - Wöchentliches Lernjournal
+- [Umsetzung](docs/Umsetzung.md) - Schritt-für-Schritt Ausführung (21 Schritte)
+- [Projektkonzept](docs/Projektkonzept.md) - Projektplanung vor der Umsetzung
+- [Projektideen](docs/Projektideen.md) - Ursprüngliche Projektideen
 
 ### [docs/konzepte/)](docs/konzepte/))
 - [Technologieentscheid](docs/konzepte/Technologieentscheid.md) - Begründung der gewählten Technologien und Kosten

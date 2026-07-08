@@ -198,14 +198,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0343650201cd6a37",
+  "active": "0be6b8c4a537aece",
   "lastOpenFiles": [
-    "docs.md",
+    "docs/Projektplanung.md",
     "README.md",
+    "docs/Projektideen.md",
+    "docs/konzepte/Projektreflexion.md",
+    "docs.md",
     "docs/konzepte/Rollenkonzept.md",
     "docs/Lernjournal.md",
     "docs/Umsetzung.md",
-    "docs/konzepte/Projektreflexion.md",
     "docs/konzepte/Technologieentscheid.md",
     "docs/konzepte/Testkonzept.md",
     "docs/konzepte",
@@ -219,8 +221,6 @@
     "images/grafana_cloudflare.png",
     "images/grafana_pods.png",
     "images/grafana_install.png",
-    "docs/Projektideen.md",
-    "docs/Projektkonzept.md",
     "diagramme/Architektursdiagramm.md",
     "diagramme/Prozessdiagramm.md",
     "images.md",
