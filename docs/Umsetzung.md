@@ -447,7 +447,7 @@ jobs:
 - Alle Schritte erfolgreich durchgelaufen:
 
 <img src="/images/github_actions_detail.png" width="980" />
-
+<br>
 
 - Hier der Prozessablauf als Flussdiagramm:
 
