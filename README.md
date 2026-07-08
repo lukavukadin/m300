@@ -16,22 +16,26 @@ Schulprojekt Modul 300 - Luka Vukadin
 - **CloudNativePG** - PostgreSQL-Cluster (1 Primary + 2 Replicas)
 - **GitHub Actions** - CI/CD Pipeline (automatisches Deployment)
 - **GCP Monitoring** - Alerting bei Pod-Ausfall
+- **Prometheus + Grafana** - Monitoring und Visualisierung
 
 ---
 ## Dokumentation
 
 ### [docs/](docs/)
-- [Lernjournal](Lernjournal.md) - Wöchentliches Lernjournal (21.05.–09.07.2026)
-- [Umsetzung](docs/Umsetzung.md) - Schritt-für-Schritt Ausführung mit Screenshots (19 Schritte)
-- [Technologieentscheid](docs/Technologieentscheid.md) - Begründung der gewählten Technologien und Kosten
-- [Testkonzept](docs/Testkonzept.md) - Durchgeführte Tests (Failover, HPA, Monitoring, CI/CD)
-- [Rollenkonzept](docs/Rollenkonzept.md) - Service Accounts und Berechtigungen (Least Privilege)
-- [Projektreflexion](docs/Projektreflexion.md) - Abschliessende Reflexion und Selbsteinschätzung
+- [Lernjournal](docs/Lernjournal.md) - Wöchentliches Lernjournal (21.05.–09.07.2026)
+- [Umsetzung](docs/Umsetzung.md) - Schritt-für-Schritt Ausführung mit Screenshots (21 Schritte)
+
+### [docs/konzepte/)](docs/konzepte/))
+- [Technologieentscheid](docs/konzepte/Technologieentscheid.md) - Begründung der gewählten Technologien und Kosten
+- [Testkonzept](docs/konzepte/Testkonzept.md) - Durchgeführte Tests (Failover, HPA, Monitoring, CI/CD, Grafana)
+- [Rollenkonzept](docs/konzepte/Rollenkonzept.md) - Service Accounts und Berechtigungen (Least Privilege)
+- [Projektreflexion](docs/konzepte/Projektreflexion.md) - Abschliessende Reflexion und Selbsteinschätzung
 
 ---
 ### [diagramme/](diagramme/)
 - [Architekturdiagramm](diagramme/Architektursdiagramm.md) - Visualisierung der Gesamtarchitektur
-- [Prozessdiagramm](diagramme/Prozessdiagramm.md) - Prozessvisualisierung von der Automatisierug
+- [Prozessdiagramm CI/CD](diagramme/Prozessdiagramm_CICD.md) - Ablauf der GitHub Actions Pipeline
+
 ---
 ### [images/](images/)
-- Screenshots und Beweise aus der Umsetzung
+Screenshots und Beweise aus der Umsetzung.
