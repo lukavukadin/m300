@@ -56,7 +56,7 @@
 -  **Erreichte Resultate:**
     
     - GCP-Projekt erstellt, APIs aktiviert, Terraform-Files geschrieben (VPC, Subnetz, GKE-Cluster, DNS-Zone, Filestore). Cluster steht, alle 3 Nodes sind `Ready`. 
-    - Zusätzlich ein [Netzwerkdiagramm](diagramme/Netzwerkdiagramm.md) erstellt zur Visualisierung der VPC/Subnetz-Struktur.
+    - Zusätzlich ein [Netzwerkdiagramm](../diagramme/Netzwerkdiagramm.md) erstellt zur Visualisierung der VPC/Subnetz-Struktur.
     
 	 - [Umsetzung](Umsetzung.md) Schritte 2-5
     
@@ -137,12 +137,12 @@
 - **Geplante Tagesziele:**
     - Monitoring einrichten und Alerting konfigurieren.
     - Secrets-Management einrichten (Passwörter aus Code entfernen).
-    - [Prozessdiagramm CI/CD](diagramme/Prozessdiagramm.md) erstellen.
+    - [Prozessdiagramm CI/CD](../diagramme/Prozessdiagramm.md) erstellen.
 	- GitHub Actions Pipeline für automatisches Deployment einrichten (CI/CD).
     
 - **Erreichte Resultate:**
     - Zwei Alert-Richtlinien eingerichtet und getestet (E-Mail kam automatisch). GitHub Actions Workflow erstellt - bei jedem Push deployt er Gitea automatisch auf GKE. Passwörter durch GitHub Secrets ersetzt.
-    - [Prozessdiagramm CI/CD](diagramme/Prozessdiagramm.md) erstellt
+    - [Prozessdiagramm CI/CD](../diagramme/Prozessdiagramm.md) erstellt
     
 	- [Umsetzung](Umsetzung.md) Schritte 18 - 20
     
