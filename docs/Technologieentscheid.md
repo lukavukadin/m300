@@ -28,3 +28,13 @@ Der e2-standard-2 bietet 2 vCPU und 8 GB RAM. Ich habe mich bewusst gegen kleine
 - **Minimale Berechtigungen**:
 	Der GitHub Actions Service Account hat nur container.developer-Rechte, nicht Owner oder Admin.
 
+---
+
+
+### Wartung & Updates
+
+- **GKE Nodes:** `auto_upgrade: true` und `auto_repair: true` aktiviert - Kubernetes-Version wird automatisch aktualisiert und defekte Nodes repariert.
+- **Gitea:** Rolling Updates via CI/CD bei jedem Push auf `main` - keine Downtime bei Updates.
+- **PostgreSQL:** Täglich automatisches Backup um 02:00 Uhr in GCS - Wiederherstellung jederzeit möglich, Aufbewahrung 7 Tage.
+- **TLS-Zertifikate:** cert-manager erneuert Let's Encrypt Zertifikate automatisch alle 90 Tage - kein manueller Eingriff nötig.
+
