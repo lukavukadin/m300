@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Lernjournal.md",
+                "file": "docs/Testkonzept.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lernjournal"
+              "title": "Testkonzept"
             }
           }
         ],
@@ -127,12 +127,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/Lernjournal.md",
+                "file": "docs/Testkonzept.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Ausgehende Links von Lernjournal öffnen"
+              "title": "Ausgehende Links von Testkonzept öffnen"
             }
           },
           {
@@ -200,6 +200,7 @@
   },
   "active": "0be6b8c4a537aece",
   "lastOpenFiles": [
+    "docs/Lernjournal.md",
     "docs/Umsetzung.md",
     "images/grafana_pods_network.png",
     "images/grafana_nodes2.png",
@@ -211,7 +212,6 @@
     "images/grafana_cloudflare.png",
     "images/grafana_pods.png",
     "images/grafana_install.png",
-    "docs/Lernjournal.md",
     "docs/Projektreflexion.md",
     "docs/Rollenkonzept.md",
     "docs/Technologieentscheid.md",
